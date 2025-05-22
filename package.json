@@ -8,14 +8,14 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "commit": "cz commit",
+    "commit": "cz",
     "prepare": "husky"
   },
-"config": {
-  "commitizen": {
-    "path": "./node_modules/cz-conventional-changelog"
-  }
-},
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
@@ -34,6 +34,7 @@
     "@vitejs/plugin-react": "^4.4.1",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^7.4.0",
     "eslint": "^9.27.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
