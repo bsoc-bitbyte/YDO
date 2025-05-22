@@ -8,7 +8,7 @@
   text-align: center;
 }
 
-.github-btn {
+.google-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,16 +25,16 @@
   transition: background-color 0.2s;
 }
 
-.github-btn:hover {
+.google-btn:hover {
   background-color: #1b1f23;
 }
 
-.github-btn:disabled {
+.google-btn:disabled {
   opacity: 0.7;
   cursor: not-allowed;
 }
 
-.github-icon {
+.google-icon {
   fill: white;
 }
 
