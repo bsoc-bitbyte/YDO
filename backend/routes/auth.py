@@ -49,7 +49,6 @@ def signout():
 @auth_bp.route("/user")
 def get_user():
     user = supabase.auth.get_user()
-    print("hiii")
     if user and user.user:
         print(type(user),user.user.user_metadata)
         return jsonify(user.user.user_metadata),200

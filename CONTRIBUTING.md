@@ -28,11 +28,8 @@ Thank you for your interest in contributing to **YDO**! This document provides g
 
 * **Component Reusability**: Designed for modularity and easy component reuse.
 
-* **Component Library**: Prefer custom components, but open to libraries that significantly boost productivity without compromising design.
+* **Component Library**: Prefer custom components.
 
-## 📜 Code of Conduct
-
-We are committed to a welcoming and inclusive environment. Please review and adhere to our [Code of Conduct](link-to-code-of-conduct-if-available). Your participation implies agreement with this code.
 
 ## 🚀 How to Contribute
 
@@ -145,6 +142,7 @@ We use **Conventional Commits**. Our Commitlint configuration enforces the follo
 
   * Max line length: 100 characters
 
+
 * **`<footer>` (Optional):** Information like breaking changes or issue references:
 
   * Start with a blank line after body
@@ -157,20 +155,13 @@ We use **Conventional Commits**. Our Commitlint configuration enforces the follo
 feat(frontend): add responsive navigation bar
 
 This commit introduces a new responsive navigation bar for better user experience on mobile devices.
-It uses pure CSS flexbox for layout and JavaScript for toggling the menu.
 
 Closes #789
 ```
 
-### Using `npm run commit`
+To perform multiline commit message you could use `git commmit` and then write the message in your editor.
 
-To ensure your commit messages adhere to these guidelines, we recommend using the `npm run commit` command. This will launch an interactive prompt that guides you through creating a valid commit message based on our Commitlint configuration.
-
-To use it:
-
-1.  Stage your changes: `git add .`
-2.  Run the commit command: `npm run commit`
-3.  Follow the prompts to select the type, scope, subject, and optional body/footer for your commit.
+**Remember :** In the commit messages, you do not need to explain what you did, we can read that in the code, but it's usually very useful to explain why you did things.
 
 ---
 
@@ -227,7 +218,7 @@ Expect many smaller, in-between issues as we progress.
 
 ## 🎨 Design Resources
 
-* **Figma Link**: `[https://www.figma.com/design/qaiNixV0TQvIu2v2L6bdv6/YDO---BSoC?node-id=0-1&p=f&t=hRvzdbSnt4uHBvhs-0]`
+* [**Figma Link**](https://www.figma.com/design/qaiNixV0TQvIu2v2L6bdv6/YDO---BSoC?node-id=0-1&p=f&t=hRvzdbSnt4uHBvhs-0)
 
 ## ❓ Getting Help
 
