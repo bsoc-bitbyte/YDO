@@ -18,7 +18,7 @@ def get_supabase() -> Client:
             key,
             options=ClientOptions(
                 storage=FlaskSessionStorage(),
-                flow_type="pkce"
+                flow_type="implicit"
             ),
         )
     return g.supabase
