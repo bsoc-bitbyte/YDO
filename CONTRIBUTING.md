@@ -1,20 +1,6 @@
 # 🤝 Contributing to YDO (You Deserve One)
 
-Thank you for your interest in contributing to **YDO**! This document provides guidelines to help you get started and ensure a smooth collaboration process.
-
-## ✨ Project Overview
-
-**YDO (You Deserve One)** is a unique matchmaking application. Users select 5 choices, and if two users mutually select the same individual, they are revealed as a match.
-
-### Key Focus Areas:
-
-* **Extreme Data Privacy & Security**: Implementing public-private key encryption to keep user data unintelligible, even to developers.
-
-* **Smooth Performance**: Efficient loading and searching through large datasets of student names and roll numbers.
-
-* **Robust Profile System**: A comprehensive and user-friendly profile system.
-
-* **Attractive & Fluid UI**: Intuitive and visually appealing interface with smooth interactions.
+Thank you for your interest in contributing to **YDO**! This document provides guidelines to help you get started and ensure a smooth collaboration process for all of us :)
 
 ## 🛠️ Tech Stack
 
@@ -30,36 +16,27 @@ Thank you for your interest in contributing to **YDO**! This document provides g
 
 * **Component Library**: Prefer custom components.
 
+## Setting up locally 📦 
 
-## 🚀 How to Contribute
+1. Install [Docker](https://www.docker.com/). Make sure it is running using the command:
+    ```bash
+    docker --version
+    ```
+2. Install [Node.js](https://nodejs.org/en/download/) (v22 or later) and [Python](https://www.python.org/downloads/) (v3.10 or later).
 
-We welcome all contributions, including:
+3. Install [Supabase CLI](https://supabase.com/docs/guides/cli).
 
-* Bug reports
+4. In supabase/.env input required environment variables, Ask on discord if you need help.
 
-* Feature requests
+5. Start the run.sh script and you are good to go!
+    ```bash
+    chmod +x run.sh
+    ./run.sh
+    ```
 
-* Documentation improvements
+6. Press `Ctrl + C` to stop the script when you are done.
 
-* Code contributions
-
-## 🐛 Reporting Bugs
-
-If you find a bug, please open an issue on our GitHub repository. Include:
-
-* A clear and concise description.
-
-* Steps to reproduce the behavior.
-
-* Expected behavior.
-
-* Screenshots or error messages (if applicable).
-
-* Your operating system and browser information.
-
-## 💡 Suggesting Enhancements
-
-Have an idea for a new feature or improvement? Open an issue and describe your suggestion in detail, explaining its value to YDO.
+> Note: It is highly recommended to review the script and try to understand what commands it runs.
 
 ## 💻 Your First Code Contribution
 

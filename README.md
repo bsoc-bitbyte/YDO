@@ -7,13 +7,14 @@
 ## ✨ Project Overview
 
 **YDO (You Deserve One)** is a unique matchmaking application. Users select 5 choices, and if two users mutually select the same individual, they are revealed as a match.
+
 ### What We're Building
 
 YDO focuses on:
 
 *   **Easy-to-Use Design**: A beautiful and intuitive interface.
 *   **Top-Notch Privacy**: Keeping your data safe with encryption. Anonymous even to the developers.
-*   **Fast Performance**: Quickly find matches, even with lots of users.
+*   **Fast Performance**: Load and search through everyone, in seconds.
 *   **Great Profiles**: A fun and informative way to showcase yourself.
 
 ---
@@ -57,19 +58,36 @@ Expect many smaller, in-between issues as we progress.
 
 *   `backend/` - Python Flask API and Supabase interactions
 *   `frontend/` - React frontend application
+*   `supabase/` - Supabase local config
 
 ---
 
-## 📦 Getting Started
+## 📦 Setting up locally
 
 1.  Fork this repo 🍴
 2.  Clone it 🔽
     ```bash
     git clone [your-fork-url] YDO
     ```
-3.  Navigate to the respective frontend or backend directory to run the development servers.
-4.  Start contributing!
+3. Install [Docker](https://www.docker.com/). Make sure it is running using the command:
+    ```bash
+    docker --version
+    ```
+4. Install [Node.js](https://nodejs.org/en/download/) (v22 or later) and [Python](https://www.python.org/downloads/) (v3.11 or later).
 
+5. Install [Supabase CLI](https://supabase.com/docs/guides/cli).
+
+6. In `supabase/.env` input required environment variables, Ask on discord if you need help.
+
+7. Start the `run.sh` script and you are good to go!
+    ```bash
+    chmod +x run.sh
+    ./run.sh
+    ```
+
+6. Press `Ctrl + C` to stop the script when you are done.
+
+> Note: It is highly recommended to review the script and try to understand what commands it runs.
 ---
 
 ## 🎨 Design Resources

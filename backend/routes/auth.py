@@ -17,7 +17,7 @@ def signin_with_google():
 
 @auth_bp.route("/callback")
 def callback():
-    next_url = request.args.get("next", current_app.config["FRONTEND_URL"])
+    next_url = request.args.get("next", current_app.config["FRONTEND_URL"]) + "/callback"
     return redirect(next_url)
 
 
