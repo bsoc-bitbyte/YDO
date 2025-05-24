@@ -1,64 +1,53 @@
-from flask import (Blueprint, current_app, jsonify, make_response, redirect,
-                   request)
+from flask import Blueprint, current_app, jsonify, redirect, request
 from supabase_client import supabase
 
-auth_bp = Blueprint('auth', __name__)
+auth_bp = Blueprint("auth", __name__)
 
 @auth_bp.route("/signin/google")
 def signin_with_google():
     res = supabase.auth.sign_in_with_oauth(
         {
             "provider": "google",
-            "options": {
-                "redirect_to": f"{request.host_url}/callback"
-            },
+            "options": {"redirect_to": f"{request.host_url}auth/callback"},
         }
     )
+
     return redirect(res.url)
+
 
 @auth_bp.route("/callback")
 def callback():
-    code = request.args.get("code")
-    next = request.args.get("next", current_app.config['FRONTEND_URL'])
+    next_url = request.args.get("next", current_app.config["FRONTEND_URL"])
+    return redirect(next_url)
 
-    if code:
-        res = supabase.auth.exchange_code_for_session({"auth_code": code})
-        
-        response = make_response(redirect(next))
-        print(res)
-
-        if res and hasattr(res, 'session'):
-            response.set_cookie(
-                'access_token', 
-                res.session.access_token,
-                httponly=False, 
-                samesite='None', 
-                domain=request.host.split(':')[0],
-                max_age=3600
-            )
-            
-        return response
-
-    return redirect(next)
 
 @auth_bp.route("/signout")
 def signout():
     res = supabase.auth.sign_out()
     return jsonify({"message": "Signed out successfully"}), 200
 
+
 @auth_bp.route("/user")
 def get_user():
-    user = supabase.auth.get_user()
-    if user and user.user:
-        print(type(user),user.user.user_metadata)
-        return jsonify(user.user.user_metadata),200
-    else:
-        return jsonify({"error": "User not authenticated"}), 401
+    auth_header = request.headers.get("Authorization")
+    access_token = None
 
-@auth_bp.route("/refresh")
-def refresh_token():
-    res = supabase.auth.refresh_access_token()
-    if res:
-        return jsonify(res), 200
-    else:
-        return jsonify({"error": "Failed to refresh token"}), 401
+    if auth_header and auth_header.startswith("Bearer "):
+        access_token = auth_header.split(" ")[1]
+    elif request.args.get("token"):
+        access_token = request.args.get("token")
+
+    if not access_token:
+        return jsonify({"error": "No access token provided"}), 401
+
+    try:
+        user = supabase.auth.get_user(access_token)
+
+        if user and user.user:
+            return jsonify(user.user.user_metadata), 200
+        else:
+            return jsonify({"error": "User not authenticated"}), 401
+
+    except Exception as e:
+        print(f"Error getting user: {e}")
+        return jsonify({"error": "Invalid token"}), 401
