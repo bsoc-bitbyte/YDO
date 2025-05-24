@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Login.css";
+import "./Login.css"
 
 const Login = ({ onLogin }) => {
   const [isLoading, setIsLoading] = useState(false);
