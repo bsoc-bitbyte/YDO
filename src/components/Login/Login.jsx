@@ -12,7 +12,10 @@ const Login = ({ onLogin }) => {
     const checkLoginStatus = async () => {
       try {
         const token = localStorage.getItem("access_token");
-        if (!token) return;
+        if (!token) {
+          setIsLoading(false);
+          return;
+        };
 
         const response = await fetch(`${API_BASE_URL}/auth/user`, {
           credentials: "include",
@@ -24,17 +27,19 @@ const Login = ({ onLogin }) => {
 
         if (response.ok) {
           setLoggedIn(true);
+        } else {
+          setIsLoading(false);
         }
       } catch (err) {
-        setIsLoading(false);
-        setLoggedIn(false);
-        console.error("Error checking login status:", err);
+          setIsLoading(false);
+          setLoggedIn(false);
+          console.error("Error checking login status:", err);
       }
     };
 
     checkLoginStatus();
-  }, [onLogin, API_BASE_URL]);
-
+  }, []);
+  
   const handleGoogleLogin = async () => {
     setIsLoading(true);
     setError(null);
