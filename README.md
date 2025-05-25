@@ -79,10 +79,13 @@ Expect many smaller, in-between issues as we progress.
 
 6. In `supabase/.env` input required environment variables, Ask on discord if you need help.
 
-7. Start the `run.sh` script and you are good to go!
+7. Start the `run.py` script and you are good to go!
     ```bash
-    chmod +x run.sh
-    ./run.sh
+    python run.py
+    ```
+    Or
+    ```bash
+    python3 run.py
     ```
 
 6. Press `Ctrl + C` to stop the script when you are done.
