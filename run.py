@@ -160,7 +160,7 @@ def start_flask():
     env['FLASK_APP'] = 'app.py'
     
     if system == "windows":
-        flask_cmd = "flask run --debug --port=5000"
+        flask_cmd = "python -m flask run --debug --port=5000"
     else:
         flask_cmd = ["flask", "run", "--debug", "--port=5000"]
         
