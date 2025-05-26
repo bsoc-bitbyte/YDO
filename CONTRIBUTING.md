@@ -28,13 +28,16 @@ Thank you for your interest in contributing to **YDO**! This document provides g
 
 4. In supabase/.env input required environment variables, Ask on discord if you need help.
 
-5. Start the run.sh script and you are good to go!
+5. Start the run.py script and you are good to go!
     ```bash
-    chmod +x run.sh
-    ./run.sh
+    python run.py
     ```
+    or
+   ```bash
+   python3 run.py
+   ```
 
-6. Press `Ctrl + C` to stop the script when you are done.
+7. Press `Ctrl + C` to stop the script when you are done.
 
 > Note: It is highly recommended to review the script and try to understand what commands it runs.
 
