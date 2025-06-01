@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./Login.css";
+import Button from "../../lib/button/Button.jsx";
 
 const Login = ({ onLogin }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -15,7 +16,7 @@ const Login = ({ onLogin }) => {
         if (!token) {
           setIsLoading(false);
           return;
-        };
+        }
 
         const response = await fetch(`${API_BASE_URL}/auth/user`, {
           credentials: "include",
@@ -31,15 +32,15 @@ const Login = ({ onLogin }) => {
           setIsLoading(false);
         }
       } catch (err) {
-          setIsLoading(false);
-          setLoggedIn(false);
-          console.error("Error checking login status:", err);
+        setIsLoading(false);
+        setLoggedIn(false);
+        console.error("Error checking login status:", err);
       }
     };
 
     checkLoginStatus();
   }, []);
-  
+
   const handleGoogleLogin = async () => {
     setIsLoading(true);
     setError(null);
@@ -53,13 +54,13 @@ const Login = ({ onLogin }) => {
   return (
     <div className="login-container">
       <span>Sign in to YDO</span>
-      <button
+      <Button
         onClick={handleGoogleLogin}
         disabled={isLoading}
-        className="google-btn"
+        className="primary"
       >
         {isLoading ? "loading..." : "Sign in with Google"}
-      </button>
+      </Button>
       {error && <p className="error-message">{error}</p>}
     </div>
   );

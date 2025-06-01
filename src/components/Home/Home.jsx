@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Button from "../../lib/button/Button";
 
 const Home = () => {
   const [userData, setUserData] = React.useState(null);
@@ -47,12 +48,20 @@ const Home = () => {
       {userData && userData.avatar_url && (
         <div>
           <img src={userData.avatar_url} alt="Profile" className="avatar" />
-          <p>Welcome <em><strong>{userData?.name}!</strong></em></p>
+          <p>
+            Welcome{" "}
+            <em>
+              <strong>{userData?.name}!</strong>
+            </em>
+          </p>
         </div>
       )}
       {!userData && <p>Please login to continue.</p>}
 
-      <button onClick={redirectToLogin}> Get Started!</button>
+      {/* <button onClick={redirectToLogin}> Get Started!</button> */}
+      <Button onClick={redirectToLogin} variant="primary">
+        Get Started!
+      </Button>
     </>
   );
 };
