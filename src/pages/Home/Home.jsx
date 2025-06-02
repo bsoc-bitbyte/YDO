@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "../../lib/button/Button";
+import Button from "../../components/button/Button";
+import { fetchUserData } from "../../utils/fetchUserData";
 
 const Home = () => {
   const [userData, setUserData] = React.useState(null);
@@ -13,34 +14,17 @@ const Home = () => {
     nav("/login");
   };
 
-  React.useEffect(() => {
-    const fetchUserData = async () => {
-      try {
-        const token = localStorage.getItem("access_token");
-        if (!token) return;
-
-        const response = await fetch(`${API_BASE_URL}/auth/user`, {
-          credentials: "include",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-        });
-
-        if (response.ok) {
-          const userData = await response.json();
-          setUserData(userData);
-        } else {
-          localStorage.removeItem("access_token");
-          localStorage.removeItem("refresh_token");
-        }
-      } catch (err) {
-        console.error("Error fetching user data:", err);
+ React.useEffect(() => {
+    const loadUser = async () => {
+      const data = await fetchUserData(API_BASE_URL);
+      if (data) {
+        setUserData(data);
       }
     };
 
-    fetchUserData();
+    loadUser();
   }, []);
+
 
   return (
     <>
