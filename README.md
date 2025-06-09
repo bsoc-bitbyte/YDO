@@ -108,11 +108,11 @@ Before you start, ensure you have the following installed on your system. You ca
     -   For the specific inputs needed for both `.env` files, you can refer to any `.env.example` files in the repository or ask for assistance on the project's Discord channel.
 
 4.  **Start Supabase:**
-        - From the root of the `YDO` directory, start the local Supabase services using the Supabase CLI:
-          ```bash
-          supabase start
-          ```
-        - This will initialize and run the Supabase stack (PostgreSQL, authentication, etc.) in Docker.
+    -   From the root of the `YDO` directory, start the local Supabase services using the Supabase CLI:
+        ```bash
+        supabase start
+        ```
+    -   This will initialize and run the Supabase stack (PostgreSQL, authentication, etc.) in Docker.
 
 5.  **Run the Application:**
     -   From the root of the `YDO` directory, execute the `run.py` script. This script is designed to handle both frontend and backend setup and startup processes.
