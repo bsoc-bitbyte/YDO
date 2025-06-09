@@ -84,7 +84,7 @@ Before you start, ensure you have the following installed on your system. You ca
 ### Getting Started
 
 1.  **Fork the Repository:**
-    -   Start by forking the [YDO GitHub repository](https://github.com/your-username/YDO) (replace `your-username/YDO` with the actual repo link) to your own GitHub account.
+    -   Start by forking the [YDO GitHub repository]
 
 2.  **Clone Your Fork:**
     -   Open your terminal and clone your forked repository. Remember to replace `[your-fork-url]` with the URL of your forked repository.
@@ -134,6 +134,8 @@ Before you start, ensure you have the following installed on your system. You ca
 
 > **Note:** It is highly recommended to review the `run.py` script to understand the commands it executes and the underlying processes it manages for a smoother development experience.
 
+---
+
 ## 🚀 Usage
 
 Once the YDO application is up and running after following the installation steps, you can begin exploring and connecting!
@@ -154,12 +156,14 @@ Once the YDO application is up and running after following the installation step
     -   Utilize your personal dashboard to update your profile information, review your current selections, and engage with your revealed matches.
 
 Start connecting and see who you're meant to discover!
+
 ---
 
-## 🤝 Contributing
+## 🤝 How to contribute
 We heartily welcome all contributions to YDO, including bug reports, feature requests, documentation improvements, and code contributions.
 
 Before you dive in, please take a moment to review our comprehensive [CONTRIBUTING.md](./CONTRIBUTING.md) guide. It contains all the detailed instructions you'll need to get started, including information on commit message formats, development workflows, and more!
+
 ---
 
 ## 🎨 Design Resources
@@ -171,7 +175,7 @@ Before you dive in, please take a moment to review our comprehensive [CONTRIBUTI
 
 For any questions, issues, or collaboration inquiries regarding YDO, feel free to reach out through:
 
--   **Discord:** Join our community for discussions and quick support: [YDO Discord](https://discord.com/invite/8Jg93F2YmJ). Feel free to ask fellow mentors and contributors about any doubts you might have!
+-   **Discord:** Join our community for discussions and quick support: [YDO Discord](https://discord.gg/9FeNzk4rZ5). Feel free to ask fellow mentors and contributors about any doubts you might have!
 ---
 
 ## 🙏 Acknowledgements
