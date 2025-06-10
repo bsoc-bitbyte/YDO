@@ -6,7 +6,7 @@
 
 ## ✨ Project Overview
 
-**YDO (You Deserve One)**  is a revolutionary romantic matchmaking application **engineered to bring brilliant minds together.** It addresses the common challenge of finding genuine romantic connections within a focused community, like engineering college students, by offering a thoughtful approach to compatibility. The magic happens when users thoughtfully curate their top 5 choices; a mutual selection instantly reveals a promising match, fostering authentic relationships.
+**YDO (You Deserve One)**  is a revolutionary romantic matchmaking application **engineered to bring brilliant minds together.** It addresses the common challenge of finding genuine romantic connections within our focused community of IIITDMJ by offering a thoughtful approach to compatibility. The magic happens when users thoughtfully curate their top 5 choices; a mutual selection instantly reveals a promising match, fostering authentic relationships.
 
 ## ✨ Features
 
@@ -50,8 +50,8 @@ This roadmap guides our journey, and we anticipate numerous smaller, impactful i
 
 Our project is neatly organized into these key directories:
 
+-   `./` - The overall frontend, comprising your intuitive React application, bringing the user experience to life.
 -   `backend/` - The robust Python Flask API, seamlessly interacting with Supabase.
--   `frontend/` - Your intuitive React application, bringing the user experience to life.
 -   `supabase/` - Local Supabase configurations, powering our database and backend services.
 
 ## ⚙️ Installation
@@ -187,3 +187,6 @@ We extend our sincere gratitude to:
 -   Our insightful mentors:
     -   [Zapper9982](https://github.com/Zapper9982)
     -   [Om-Thorat](https://github.com/Om-Thorat)
+
+---
+Made with 💖 by Team YDO.
