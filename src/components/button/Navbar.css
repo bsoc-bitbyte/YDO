@@ -1,0 +1,68 @@
+.nav-header{
+    height: 82px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 2px;
+  }
+  .nav-middle{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15px;
+  }
+  .content{  
+    color: #F6CCB6;
+    font-size: 25px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    margin-right: 15px;
+  }
+  .tool-set{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .notifications-YDO{
+    height: 24px;
+    margin-right: 20px;
+  }
+  .Settings-YDO{
+    height: 28px;
+    margin-right: 20px;
+  }
+  .Account-YDO{
+    height: 27px;
+    margin-right: 20px;
+  }
+  .YDO-logo{
+    height: 81px;
+    margin-right: 20px;
+  }
+  
+  
+  .notifications-YDO:hover,
+  .Settings-YDO:hover,
+  .Account-YDO:hover,
+  .content:hover
+  {
+    color: #F6CCB6;
+    filter: url(#redShadow);
+  }
+  .active{
+    color: #F6CCB6;
+    filter: url(#pinkShadow);
+  }
+  .active:hover{
+    color: #F6CCB6;
+    filter: url(#pinkShadow);
+  }
