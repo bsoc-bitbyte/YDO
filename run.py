@@ -162,15 +162,24 @@ def start_flask():
     if system == "windows":
         flask_cmd = "python -m flask run --debug --port=5000"
     else:
-        flask_cmd = ["flask", "run", "--debug", "--port=5000"]
+        flask_cmd = [ get_python_command(),"-m", "flask", "run", "--debug", "--port=5000"]
         
     flask_process = subprocess.Popen(
         flask_cmd,
         cwd=backend_dir,
         env=env,
-        shell=(system == "windows")
+        shell=(system == "windows"),
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True
+
     )
-    
+    time.sleep(2)  # Give Flask some time to start
+    if flask_process.poll() is not None:
+        stdout, stderr = flask_process.communicate()
+        print_error("Flask server failed to start")
+        print_error(f"STDOUT: {stdout}")
+        raise RuntimeError(f"STDERR: {stderr}")
     print_success("Flask server started on http://localhost:5000")
     
 def start_frontend():

@@ -1,11 +1,8 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Login from './components/Login/Login'
-import { Routes,Route,Navigate } from 'react-router-dom'
-import Home from './components/Home/Home'
-import Callback from './components/Callback/Callback'
+import "./App.css";
+import Login from "./pages/Login/Login";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Home from "./pages/Home/Home.jsx";
+import Callback from "./pages/Callback/Callback";
 import NotFound from './pages/404/404'
 
 function App() {
@@ -19,4 +16,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
