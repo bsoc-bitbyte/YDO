@@ -1,6 +1,10 @@
 import React from 'react'
 import {NavLink} from 'react-router'
 import './Navbar.css'
+import YDO from '../../assets/navbar-images/YDO-logo.png'
+import notification from '../../assets/navbar-images/notification-YDO.png'
+import Account from '../../assets/navbar-images/Account-YDO.png'
+import Settings from '../../assets/navbar-images/Settings-YDO.png'
 
 function Navbar() {
 
@@ -36,11 +40,11 @@ function Navbar() {
       </svg>
       <div className="nav-header">
         <nav className="nav-middle">
-          <img className="YDO-logo" src='/navbar-images/YDO-logo.png'/>
+          <img className="YDO-logo" src={YDO} alt='YDO-logo'/>
           <NavLink style={{textDecoration:'none'}} to={'/'} className={({isActive})=>`content ${isActive? "active":""}`}>
           Home
           </NavLink>
-          <NavLink style={{textDecoration:'none'}} to={'/search'} className={({isActive})=>`content ${isActive? "active":""}`}>
+          <NavLink style={{textDecoration:'none'}} to={'/login'} className={({isActive})=>`content ${isActive? "active":""}`}>
           Search
           </NavLink>
           <NavLink style={{textDecoration:'none'}} to={'/choice'} className={({isActive})=>`content ${isActive? "active":""}`}>
@@ -51,13 +55,13 @@ function Navbar() {
           </NavLink>
           <div className="tool-set">
           <NavLink style={{textDecoration:'none'}} to={'/notifications'} className={({isActive})=>`notifications-YDO ${isActive? "active":""}`}>
-          <img src="/navbar-images/notification-YDO.png" alt='notifications'/>
+          <img src={notification} alt='notifications'/>
           </NavLink>
           <NavLink style={{textDecoration:'none'}} to={'/settings'} className={({isActive})=>`Settings-YDO ${isActive? "active":""}`}>
-          <img src="/navbar-images/Settings-YDO.png" alt='settings'/>
+          <img src={Settings} alt='settings'/>
           </NavLink>
           <NavLink style={{textDecoration:'none'}} to={'/account'} className={({isActive})=>`Account-YDO ${isActive? "active":""}`}>
-          <img src="/navbar-images/Account-YDO.png" alt='account'/>
+          <img src={Account} alt='account'/>
           </NavLink>  
           </div>
         </nav>
