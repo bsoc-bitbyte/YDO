@@ -1,7 +1,7 @@
-import React from 'react';
+
 import './404.css';
-import backgroundImage from '/src/assets/404bg.png'; // Import the image
-import arrowImage from '/src/assets/404arrow.svg'; // Import the arrow too
+import backgroundImage from '/src/assets/404/404bg.png';
+import arrowImage from '/src/assets/404/404arrow.svg';
 
 
 function NotFound() {
