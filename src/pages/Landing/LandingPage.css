@@ -1,0 +1,272 @@
+#root {
+    width: 100%;
+    height:100vh;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    overflow-x: hidden;
+    overflow-y:hidden;
+    height:100vh;
+    width:100vw;
+}
+.landingPage{
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:rgba(246,204,182,1);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+.landingPageContent{
+    position: relative;
+    top:-8%;
+}
+#ydo{
+    color:rgba(246,204,182,1);
+    display: flex;
+    font-weight: 800;
+    font-size: 200px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    justify-content: center;
+    gap: 0.25rem;
+}
+.d{
+    rotate: -37.9deg;
+}
+.arrow{
+    position:absolute;
+    width:220px;
+    height: 220px;
+    top:35%;
+    left: 44%;
+    transform: translate(-47%,-59%);
+}
+.o{
+    position: relative;
+    display:inline-block;
+}
+.landingPage p{
+    display:flex;
+    justify-content: center;
+    align-items:center ;
+    margin-top: 1.5rem;
+}
+.tagLine{
+    font-weight: 600;
+    font-size: 32px;
+    padding-top: 1.5%;
+}
+.landingPageFooter {
+    margin-top: 2rem;
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: rgba(246,204,182,1);
+    letter-spacing: 1px;
+    position:fixed;
+    bottom: 40px;
+}
+.get-started-btn {
+    position: relative;
+    display: inline-block;
+    margin: 1rem auto;
+    padding: 28px auto;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 100%;
+    text-align: center;
+    color: rgba(246,204,182,1);
+    border: 2px solid rgba(246,204,182, 1);
+    border-radius: 18px;
+    transition: all 0.35s ease;
+    background-color: rgba(217, 217, 217, 0.22);
+    background-image: url("../../assets/Landingpage/lpbutton.svg") ;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+    gap:1rem;
+    margin-top: 2rem;
+}
+
+.get-started-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,transparent,rgba(255, 255, 255, 0.2),transparent);
+    transition: left 0.6s ease;
+    z-index: 0;
+}
+
+.get-started-btn:hover::before {
+    left: 100%;
+}
+
+
+.get-started-btn:hover {
+    font-weight: 800;
+    color: rgba(115, 29, 28, 1);
+    background: rgba(217, 217, 217, 0.22);
+    border-color: rgba(115, 29, 28, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.30);
+    background-image: url("../../assets/Landingpage/lpbutton.svg") ;
+}
+
+@media screen and (min-width: 481px) and (max-width: 770px) {
+    .landingPage{
+        padding:1.5rem 1rem;
+    }
+    .landingPageContent{
+        width:clamp(300px,85vw,380px);
+        gap:0.1rem; 
+    }
+    #ydo{
+        font-size: 125px;
+        line-height: 100%;
+    }
+    .arrow{
+        width:150px;
+        height: 140px;
+        top:29.5%;
+    }
+    .tagLine{
+        font-size: 22.5px;
+    }
+    .Line{
+        width: 49px;
+    }
+    .get-started-btn{
+        padding: 22 auto;
+        font-size: 30px;
+        min-width: 220px;
+        margin: 32 auto; 
+    }
+    .landingPageFooter{
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (min-width: 371px) and (max-width: 480px){
+    .landingPage{
+        padding:1.5rem 1rem;
+    }
+    .landingPageContent{
+        width:clamp(300px,85vw,380px);
+        gap:0.1rem; 
+    }
+    #ydo{
+        font-size: 110px;
+        line-height: 100%;
+    }
+    .arrow{
+        width:120px;
+        height: 120px;
+        top:29.5%;
+        left:45%;
+    }
+    .tagLine{
+        font-size: 18px;
+    }
+    .Line{
+        width: 43px;
+    }
+    .get-started-btn{
+        padding: 22 auto;
+        font-size: 21px;
+        min-width: 170px;
+        margin: 32 auto; 
+    }
+    .landingPageFooter{
+        font-size:0.8rem;
+    }
+}
+@media screen and (max-width: 370px){
+    .landingPage{
+        padding:1.5rem 1rem;
+    }
+    .landingPageContent{
+        width:clamp(300px,85vw,380px);
+        gap:0.1rem; 
+    }
+    #ydo{
+        font-size: 90px;
+        line-height: 100%;
+    }
+    .arrow{
+        width:95px;
+        height: 110px;
+        top:26.5%;
+        left:45.5%;
+    }
+    .tagLine{
+        font-size: 16px;
+        padding-top:8px;
+    }
+    .Line{
+        width:34px;
+    }
+    .get-started-btn{
+        padding: 20 auto;
+        font-size: 20px;
+        min-width: 140px;
+        margin: 32 auto; 
+    }
+    .landingPageFooter{
+        font-size:0.6rem;
+    }
+}
+
+@media screen and (max-height:500px) and (orientation:landscape){
+    .landingPage{
+        padding:1.5rem 1rem;
+    }
+    .landingPageContent{
+        width:clamp(300px,85vw,380px);
+        gap:0.1rem; 
+    }
+    #ydo{
+        font-size: 90px;
+        line-height: 100%;
+    }
+    .arrow{
+        width:95px;
+        height: 110px;
+        top:26.75%;
+        left:46.25%;
+    }
+    .tagLine{
+        font-size: 16px;
+        padding-top:8px;
+    }
+    .Line{
+        width:34px;
+    }
+    .get-started-btn{
+        padding: 20 auto;
+        font-size: 20px;
+        min-width: 140px;
+        margin: 32 auto; 
+    }
+    .landingPageFooter{
+        font-size:0.6rem;
+    }
+}
