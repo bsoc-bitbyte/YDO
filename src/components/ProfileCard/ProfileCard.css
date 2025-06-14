@@ -4,29 +4,29 @@
     align-items: center;
     justify-content: center;
     background: transparent;
-    border:2px solid #ffffffc0;
-    border-radius: 32px;
+    border:1px solid #FFFFFF;
+    border-radius: 44px;
     padding :24px 8px;
     color:#4D2E5A;
     font-family: 'Poppins' , sans-serif;
-    width:480px;
-    height:240px;
+    width:527px;
+    height:288px;
     gap:24px;
 }
 .profile-img-back{
-    border-radius: 24px;
-    width:180px;
-    height:220px;
+    border-radius: 32px;
+    width:162px;
+    height:221px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 12px;
+    margin-left: 30px;
 }
 .profile-img{
-    width:100%;
+    width:162px;
     height:100%;
     object-fit:cover;
-    border-radius:23px;
+    border-radius:32px;
 }
 .profile-info{
     display:flex;
@@ -37,39 +37,51 @@
 .profile-name-age{
     display:flex;
     flex-direction:row;
-    gap:80px;
-    font-size:22px;
+    gap:165px;
+    font-size:21px;
     letter-spacing:2px;
+}
+.profile-name{
+    font-weight: 700;
+}
+.profile-age{
+    font-weight: 600;
 }
 .profile-branch-year{
     display:flex;
     flex-direction: row;
-    gap:20px;
-    font-size:22px;
-    margin-bottom:8px;
+    gap:75px;
+    font-size:21px;
+    margin-bottom:11px;
     letter-spacing:2px;
+    font-weight: 500;
 }
 .profile-tags{
     display: flex;
     flex-wrap: wrap;
-    gap:12px;
-    margin-bottom: 13px;
+    gap:20px;
+    row-gap: 15px;
+    margin-bottom: 15px;
 }
 .profile-tag{
-    padding:4px 16px;
-    border : 1px solid #FFFFFF4D;
-    border-radius: 14px;
-    font-size:10px;
+    height:20px;
+    padding:3.5px 9px;
+    border : 1px solid #ffffff1c;
+    border-radius: 11px;
+    font-size:8px;
     background:transparent;
     letter-spacing:1px;
+    font-weight: 400;
 }
 .profile-bio{
-    width:100%;
-    padding:6px 0px;
-    border : 1px solid #FFFFFF4D;
-    border-radius: 14px;
-    font-size:10px;
+    height:20px;
+    width:244px;
+    padding:3.5px 9px;
+    border : 1px solid #ffffff1c;
+    border-radius: 11px;
+    font-size:8px;
     background:transparent;
     letter-spacing:1px;
     justify-content: center;
+    font-weight: 400;
 }
