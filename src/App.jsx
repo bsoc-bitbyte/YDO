@@ -1,4 +1,5 @@
 import "./App.css";
+import Landingpage from "./pages/Landing/LandingPage.jsx";
 import Login from "./pages/Login/Login";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home/Home.jsx";
@@ -7,10 +8,11 @@ import NotFound from './pages/404/404'
 
 function App() {
   return (
-     <Routes>
-      <Route path='/' element={<Home/>} />
-      <Route path='/login' element={<Login/>} />
-      <Route path='/callback' element={<Callback />} />
+    <Routes>
+      <Route path="/" element={<Landingpage />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/callback" element={<Callback />} />
       <Route path="*" element={<NotFound />} />
      </Routes>
   )
