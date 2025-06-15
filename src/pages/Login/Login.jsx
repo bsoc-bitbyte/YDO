@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import "./Login.css";
 import Button from "../../components/button/Button";
 import { checkLoginStatus } from "../../utils/checkLoginStatus";
-
+import HeartAnimation from "./HeartAnimation";
+import backgroundImage from  '../../assets/login/bg-login.jpg'
 const Login = ({ onLogin }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -29,19 +30,27 @@ const Login = ({ onLogin }) => {
   if (loggedIn) {
     window.location.href = "/";
   }
-
   return (
-    <div className="login-container">
-      <span>Sign in to YDO</span>
-      <Button
-        onClick={handleGoogleLogin}
-        disabled={isLoading}
-        className="primary"
-      >
-        {isLoading ? "loading..." : "Sign in with Google"}
-      </Button>
-      {error && <p className="error-message">{error}</p>}
+    <>
+    <div className="container" style={{backgroundImage:`url(${backgroundImage})`}}>
+      <div className="login-container">
+        <HeartAnimation />
+        <div className="login-card">
+          <div className="title">YOU DESERVE ONE</div>
+          <div className="google-button" onClick={handleGoogleLogin}>
+            <div className="text">Login with</div>
+            <div className="google-icon"></div>
+          </div>   
+          <p className="confidential-text">
+            All your information is confidential
+            <br />
+            Even the developers can’t access your data.read{" "}
+            <span style={{ textDecoration: "underline" }}>how.</span>
+          </p>
+        </div>
+      </div>
     </div>
+    </>
   );
 };
 
