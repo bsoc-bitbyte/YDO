@@ -9,30 +9,30 @@ function Landingpage(){
     const navigate = useNavigate();
 
     return (
-        <div className="landingPage" style={{ backgroundImage: `url(${backgroundImage})` }}>
-            <div className="landingPageContent">
+        <div className="landing_page" style={{ backgroundImage: `url(${backgroundImage})` }}>
+            <div className="landing_page_content">
                 <div id="ydo">
-                    <div className="y">Y</div>
-                    <div className="d">D</div>
+                    <div className="logo_y">Y</div>
+                    <div className="logo_d">D</div>
                     <div className="image__wrapper">
                         <img src={arrowImage} alt="arrow" className="arrow" />
                     </div>
-                    <div className="o">O</div>
+                    <div className="logo_o">O</div>
                 </div>
                 <p>
                     <div className="line">
                         <img src={line} alt="line" className="Line" />
                     </div>
-                    <div className="tagLine">YOU DESERVE ONE</div>
+                    <div className="tagline">YOU DESERVE ONE</div>
                     <div className="line">
                         <img src={line} alt="line" className="Line" />
                     </div>
                 </p>
-                <button className="get-started-btn" onClick={() => navigate("/login")}>
+                <button className="get_started_btn" onClick={() => navigate("/login")}>
                     GET STARTED
                 </button>
             </div>
-            <p className="landingPageFooter">
+            <p className="landing_page_footer">
                     IIITDMJ'S EXCLUSIVE DATING APPLICATION
             </p>
         </div>
