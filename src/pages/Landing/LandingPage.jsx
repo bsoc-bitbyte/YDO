@@ -2,8 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./LandingPage.css";
 import backgroundImage from "../../assets/Landingpage/bg.jpg";
-import arrowImage from "../../assets/Landingpage/arrowImage.svg";
-import line from "../../assets/Landingpage/line.svg";
+import arrowImage from "../../assets/Landingpage/arrowimage.svg";
+import line from "../../assets/Landingpage/Line.svg";
 
 function Landingpage(){
     const navigate = useNavigate();
