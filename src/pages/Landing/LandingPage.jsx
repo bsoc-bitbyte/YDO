@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./LandingPage.css";
 import backgroundImage from "../../assets/Landingpage/bg.jpg";
 import arrowImage from "../../assets/Landingpage/arrowImage.svg";
@@ -7,6 +7,7 @@ import line from "../../assets/Landingpage/Line.svg";
 
 function Landingpage(){
     const navigate = useNavigate();
+
     return (
         <div className="landing_page" style={{ backgroundImage: `url(${backgroundImage})` }}>
             <div className="landing_page_content">
