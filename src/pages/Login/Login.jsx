@@ -3,7 +3,7 @@ import "./Login.css";
 import Button from "../../components/button/Button";
 import { checkLoginStatus } from "../../utils/checkLoginStatus";
 import HeartAnimation from "./HeartAnimation";
-import backgroundImage from  '../../assets/login/bg-login.jpg'
+import backgroundImage from  '../../assets/login/bg-login.png'
 const Login = ({ onLogin }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -38,14 +38,13 @@ const Login = ({ onLogin }) => {
         <div className="login-card">
           <div className="title">YOU DESERVE ONE</div>
           <div className="google-button" onClick={handleGoogleLogin}>
-            <div className="text">Login with</div>
-            <div className="google-icon"></div>
+            <div className="text">LOGIN WITH</div>
+           <div className="wrapper"><div className="google-icon"></div></div> 
           </div>   
           <p className="confidential-text">
             All your information is confidential
             <br />
-            Even the developers can’t access your data.read{" "}
-            <span style={{ textDecoration: "underline" }}>how.</span>
+            Even the developers can’t access your data.read{" "}how
           </p>
         </div>
       </div>
