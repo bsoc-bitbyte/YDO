@@ -24,7 +24,7 @@ const Login = ({ onLogin }) => {
   const handleGoogleLogin = async () => {
     setIsLoading(true);
     setError(null);
-    window.location = `${API_BASE_URL}/auth/signin/google`;
+    window.location = `${API_BASE_URL}/`;
   };
 
   if (loggedIn) {
@@ -36,7 +36,7 @@ const Login = ({ onLogin }) => {
       <div className="login-container">
         <HeartAnimation />
         <div className="login-card">
-          <div className="title">YOU DESERVE ONE</div>
+          <div className="Title">YOU DESERVE ONE</div>
           <div className="google-button" onClick={handleGoogleLogin}>
             <div className="text">LOGIN WITH</div>
            <div className="wrapper"><div className="google-icon"></div></div> 

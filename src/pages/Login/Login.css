@@ -41,14 +41,14 @@ background: rgba(246, 204, 182, 0.34);
   padding: 2.5rem 2rem;
   border-radius: 20px;
  max-width: 340px;
-  width: 24%;
+  width: 30%;
   margin-right: 5vw;
   z-index: 1;
   margin-top: 35vh;
 }
-.title {
+.Title {
   font-weight: 600;
-  font-size: 32px;
+  font-size: 30px;
   line-height: 48px;
     font-family: 'Poppins';
   text-align: center;
@@ -89,7 +89,7 @@ padding: 0.5rem 1.1rem;
   background-size: contain;
 }
 .confidential-text {
-  width: 320px;
+  width: 299px;
   height: 67px;
   font-size: 20px;
   line-height: 30px;
@@ -103,7 +103,7 @@ padding: 0.5rem 1.1rem;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 501;
-  font-size: 22px;
+  font-size: 1.3vw;
   line-height: 36px;
   text-align: center;
   letter-spacing: 0.02em;
@@ -157,7 +157,7 @@ background: rgba(246, 204, 182, 0.34);
     box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.25);
     max-width: 320px;
     width: 40%;
-    height: 300px;
+    height: 50vh;
     margin-right: 2vw;
     z-index: 1;
     margin-bottom: 10vw;
@@ -166,7 +166,7 @@ background: rgba(246, 204, 182, 0.34);
 
   }
 
-  .title {
+  .Title {
     font-weight: 600;
     font-size: 30px;
     line-height: 48px;
@@ -205,8 +205,8 @@ padding: 0.5rem 1.1rem;
   }
 
   .google-icon {
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 22px;
     background: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg') no-repeat center;
     background-size: contain;
   }
@@ -226,7 +226,7 @@ padding: 0.5rem 1.1rem;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 502;
-    font-size: 20px;
+    font-size: 1.3vw;
     line-height: 36px;
     text-align: center;
     letter-spacing: 0.02em;
@@ -275,7 +275,8 @@ background: rgba(246, 204, 182, 0.34);
     border-radius: 20px;
     box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.25);
     max-width: 310px;
-    width: 30%;
+    width: 35%;
+    height: 50vh;
     margin-right: 5vw;
     z-index: 1;
     margin-bottom: 60px;
@@ -295,16 +296,16 @@ background: rgba(246, 204, 182, 0.34);
 
   .confidential-text {
     width: 100%;
-    height: 95px;
+    height: 115px;
     font-size: 18px;
-    line-height: 30px;
+    line-height: 28px;
     text-align: center;
     color: #4D2E5A;
   }
 
-  .title {
+  .Title {
     font-weight: 600;
-    font-size: 3vw;
+    font-size: 2.6vw;
     line-height: 36px;
     text-align: center;
     color: #731D1C;
@@ -340,7 +341,7 @@ padding: 0.5rem 1.1rem;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 501;
-    font-size: 2vw;
+    font-size: 1.4vw;
     line-height: 36px;
     text-align: center;
     letter-spacing: 0.02em;
@@ -394,9 +395,9 @@ background: rgba(246, 204, 182, 0.34);
     margin-right: 8vw;
   }
 
-  .title {
+  .Title {
     font-weight: 600;
-    font-size: 5vw;
+    font-size: 4vw;
     line-height: 58px;
     text-align: center;
     color: #731D1C;
@@ -432,14 +433,14 @@ padding: 0.5rem 1.1rem;
   }
 
   .google-icon {
-    width: 29px;
-    height: 29px;
+    width: 23px;
+    height: 23px;
     background: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg') no-repeat center;
     background-size: contain;
   }
 
   .confidential-text {
-    width: 363px;
+    width: 300px;
     height: 95px;
     font-size: 20px;
     line-height: 30px;
@@ -453,7 +454,7 @@ padding: 0.5rem 1.1rem;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 501;
-    font-size: 21px;
+    font-size: 2.2vw;
     line-height: 36px;
     text-align: center;
     letter-spacing: 0.02em;
@@ -495,7 +496,7 @@ background: rgba(246, 204, 182, 0.34);
     box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.25);
     max-width: 300px;
     width: 52%;
-    height: 48%;
+    height: 52%;
     margin-right: 5vw;
     z-index: 1;
     margin-bottom: 60px;
@@ -506,16 +507,16 @@ background: rgba(246, 204, 182, 0.34);
 
   .container1 {
     position: relative;
-    top: 53vh;
+    top: 56vh;
     left: 42vw;
     width: 131vw;
     height: 100vh;
     margin-right: 8vw;
   }
 
-  .title {
+  .Title {
     font-weight: 600;
-    font-size: 5vw;
+    font-size: 4vw;
     line-height: 36px;
     text-align: center;
     color: #731D1C;
@@ -536,7 +537,7 @@ background: rgba(246, 204, 182, 0.34);
     display: flex;
   justify-content: center;
   align-items: center;
-  width: 65%;
+  width: 78%;
     margin: 0 auto 1.5rem auto;
   gap: 0.5rem;
   background: #731D1C;
@@ -552,15 +553,15 @@ padding: 0.5rem 1.1rem;
   }
 
   .google-icon {
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
     background: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg') no-repeat center;
     background-size: contain;
   }
 
   .confidential-text {
     width: 105%;
-    height: 95px;
+    height: 20%;
     font-size: 17px;
     line-height: 30px;
     text-align: center;
@@ -568,13 +569,13 @@ padding: 0.5rem 1.1rem;
   }
 
   .text {
-    width: 148px;
-    height: 36px;
+    width: 158px;
+    height: 48px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 501;
-    font-size: 4vw;
-    line-height: 36px;
+    font-size: 2vw;
+    line-height: 48px;
     text-align: center;
     letter-spacing: 0.02em;
   }
@@ -607,7 +608,7 @@ background: rgba(246, 204, 182, 0.34);
     z-index: 1;
     margin-bottom: 60px;
     position: relative;
-      bottom: 65vh;
+      bottom: 61vh;
     left: 19px;
   }
   .container{
@@ -617,15 +618,15 @@ background: rgba(246, 204, 182, 0.34);
     justify-content: center;
     align-items: center;
   }
-  .title {
-    font-size: 5vw;
+  .Title {
+    font-size: 3.5vw;
   }
 
   .google-button {
     display: flex;
   justify-content: center;
   align-items: center;
-  width: 65%;
+  width: 83%;
     margin: 0 auto 1.5rem auto;
   gap: 0.5rem;
   background: #731D1C;
@@ -641,8 +642,8 @@ padding: 0.5rem 1.1rem;
   }
 
   .google-icon {
-    width: 22px;
-    height: 22px;
+    width: 17px;
+    height: 17px;
   }
 
   .text {
@@ -651,14 +652,16 @@ padding: 0.5rem 1.1rem;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 501;
-    font-size: 3.8vw;
+    font-size: 1.6vw;
+    line-height: 38px;
   }
 
   .confidential-text {
-    font-size: 15px;
+    font-size: 13px;
+   line-height: 25px;
   }
 }
-@media (max-height:450px) {
+@media (max-height:400px){
     .container1 {
     position: relative;
     top: 113vh;
@@ -673,9 +676,9 @@ background: rgba(246, 204, 182, 0.34);
     padding: 2.5rem 2rem;
     border-radius: 20px;
     box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.25);
-    max-width: 199px;
+    max-width: 254px;
     width: 55%;
-    height: 79%;
+    height: 85%;
     margin-right: 5vw;
     z-index: 1;
     margin-bottom: 60px;
@@ -686,7 +689,7 @@ background: rgba(246, 204, 182, 0.34);
   .container{
     overflow-y: auto;
   }
-  .title {
+  .Title {
     font-size: 2.2vw;
   }
 
@@ -720,13 +723,13 @@ padding: 0.5rem 1.1rem;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 501;
-    font-size: 1.5vw;
+    font-size: 1.4vw;
   }
 
  .confidential-text {
     width: 105%;
     height: 20vh;
-    font-size: 1.8vw;
+    font-size: 1.5vw;
     line-height: 30px;
     text-align: center;
     color: #4D2E5A;
@@ -752,9 +755,9 @@ background: rgba(246, 204, 182, 0.34);
     padding: 2.5rem 2rem;
     border-radius: 20px;
     box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.25);
-    max-width: 199px;
+    max-width: 254px;
     width: 55%;
-    height: 79%;
+    height: 85%;
     margin-right: 5vw;
     z-index: 1;
     margin-bottom: 60px;
@@ -765,7 +768,7 @@ background: rgba(246, 204, 182, 0.34);
   .container{
     overflow-y: auto;
   }
-  .title {
+  .Title {
     font-size: 2.2vw;
   }
 
@@ -773,7 +776,7 @@ background: rgba(246, 204, 182, 0.34);
     display: flex;
   justify-content: center;
   align-items: center;
-  width: 65%;
+  width: 72%;
     margin: 0 auto 1.5rem auto;
   gap: 0.5rem;
   background: #731D1C;
@@ -799,7 +802,7 @@ padding: 0.5rem 1.1rem;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 501;
-    font-size: 1.5vw;
+    font-size: 1vw;
   }
 
  .confidential-text {
@@ -813,5 +816,23 @@ padding: 0.5rem 1.1rem;
 
   .animated-path{
     display: none;
+  }
+}
+@media (max-height:700px){
+  .login-card{
+    max-width: 254px;
+    width: 55%;
+    height: 90%;
+  }
+   .text {
+    width: 116px;
+    height: 36px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 501;
+    font-size: 1vw;
+  }
+  .google-button{
+    width: 72%;
   }
 }
