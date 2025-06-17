@@ -661,7 +661,7 @@ padding: 0.5rem 1.1rem;
    line-height: 25px;
   }
 }
-@media (max-height:400px){
+@media (max-height:400px) {
     .container1 {
     position: relative;
     top: 113vh;
@@ -834,5 +834,9 @@ padding: 0.5rem 1.1rem;
   }
   .google-button{
     width: 72%;
+  }
+  .confidential-text{
+    font-size: 1.3vw;
+    width: 199px;
   }
 }

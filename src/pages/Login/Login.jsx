@@ -24,7 +24,7 @@ const Login = ({ onLogin }) => {
   const handleGoogleLogin = async () => {
     setIsLoading(true);
     setError(null);
-    window.location = `${API_BASE_URL}/`;
+    window.location = `${API_BASE_URL}/auth/signin/google`;
   };
 
   if (loggedIn) {

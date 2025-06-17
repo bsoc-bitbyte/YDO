@@ -7,7 +7,6 @@ import line from "../../assets/Landingpage/Line.svg";
 
 function Landingpage(){
     const navigate = useNavigate();
-
     return (
         <div className="landing_page" style={{ backgroundImage: `url(${backgroundImage})` }}>
             <div className="landing_page_content">
