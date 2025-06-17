@@ -7,6 +7,8 @@ import Callback from "./pages/Callback/Callback";
 import NotFound from './pages/404/404';
 import PrivateRoute from "./components/ProtectedRoutes/ProtectedRoutes.jsx";
 import MainLayout from "./layouts/MainLayout.jsx";
+import ProfilePage from "./pages/Profile/ProfilePage.jsx";
+
 
 function App() {
   return (
@@ -15,8 +17,12 @@ function App() {
       <Route path="/" element={<Landingpage />} />
       <Route path="/home" element={<PrivateRoute><Home/></PrivateRoute>}/>
       <Route path="/login" element={<Login />} />
+ <Route path="/profile" element={<PrivateRoute><ProfilePage /></PrivateRoute>} />
       <Route path="/callback" element={<Callback/>}/>
       </Route>
+
+      <Route path="/callback" element={<Callback />} />
+      <Route path="/profile" element={<ProfilePage />} />
       <Route path="*" element={<NotFound />} />
      </Routes>
   )
