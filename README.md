@@ -93,7 +93,7 @@ Before you start, ensure you have the following installed on your system. You ca
         cd YDO
         ```
 
-3.  **Supabase Configuration:**
+3.  **.env configuration:**
     -   Navigate into the `supabase/` directory:
         ```bash
         cd supabase
