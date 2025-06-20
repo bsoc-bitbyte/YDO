@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+.profile-card{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(45px);
+    -webkit-backdrop-filter: blur(45px);
+    box-shadow: 0px 4px 28px 4px rgba(0,0,0,0.25);
+    border:1px solid rgba(255, 255, 255, 1);
+    border-radius: 44px;
+    padding :24px 8px;
+    color:rgba(77, 46, 90, 1);
+    font-family: 'Poppins' , sans-serif;
+    width:527px;
+    height:288px;
+    gap:24px;
+}
+.profile-img-back{
+    border-radius: 32px;
+    width:162px;
+    height:221px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+}
+.profile-img{
+    width:162px;
+    height:100%;
+    object-fit:cover;
+    border-radius:32px;
+}
+.profile-info{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    width:320px;
+}
+.profile-name-age{
+    display:flex;
+    flex-direction:row;
+    gap:165px;
+    font-size:21px;
+    letter-spacing:2px;
+}
+.profile-name{
+    font-weight: 700;
+}
+.profile-age{
+    font-weight: 600;
+}
+.profile-branch-year{
+    display:flex;
+    flex-direction: row;
+    gap:75px;
+    font-size:21px;
+    margin-bottom:11px;
+    letter-spacing:2px;
+    font-weight: 500;
+}
+.profile-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    row-gap: 15px;
+    margin-bottom: 15px;
+}
+.profile-tag{
+    height:20px;
+    padding:3.5px 9px;
+    border : 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 11px;
+    font-size:8px;
+    background:transparent;
+    letter-spacing:1px;
+    font-weight: 400;
+}
+.profile-bio{
+    height:20px;
+    width:244px;
+    padding:3.5px 9px;
+    border : 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 11px;
+    font-size:8px;
+    background:transparent;
+    letter-spacing:1px;
+    justify-content: center;
+    font-weight: 400;
+}
