@@ -17,8 +17,6 @@ const HeartAnimation = () => {
    <>
    <div className="container1">
       <svg
-        // width="1280"
-        // height="832"
         viewBox="-40 5 1035 902"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

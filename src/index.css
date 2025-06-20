@@ -28,7 +28,6 @@ body {
   display: flex;
   place-items: center;
   justify-content: center;
-  /* overflow: hidden; */
   min-width: 320px;
   min-height: 100vh;
 }

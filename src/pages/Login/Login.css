@@ -50,9 +50,9 @@ background: rgba(246, 204, 182, 0.34);
   font-weight: 600;
   font-size: 30px;
   line-height: 48px;
-    font-family: 'Poppins';
+  font-family: 'Poppins';
   text-align: center;
-  color: #731D1C;
+  color: rgba(115, 29,28,1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,8 +60,8 @@ background: rgba(246, 204, 182, 0.34);
 }
 
 .google-button:hover {
-  color: #D96C81;
-  background: #FFFFFF;
+  color: rgba(217,108,129,1);
+  background: rgba(255,255,255,1);
   box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.25);
 }
  .google-button {
@@ -71,8 +71,8 @@ background: rgba(246, 204, 182, 0.34);
   width: 15vw;
     margin: 0 auto 1.5rem auto;
   gap: 0.5rem;
-  background: #731D1C;
-color: #F6CCB6;
+  background: rgba(115, 29,28,1);
+color: rgba(246,204,182,1);
 padding: 0.5rem 1.1rem;
  border-radius: 81.0624px;
  box-shadow: 0px 6.485px 6.485px rgba(0, 0, 0, 0.25);
@@ -94,7 +94,7 @@ padding: 0.5rem 1.1rem;
   font-size: 20px;
   line-height: 30px;
   text-align: center;
-   color: #731D1C;
+   color: rgba(115, 29,28,1);
 }
 
 .text {
@@ -171,7 +171,7 @@ background: rgba(246, 204, 182, 0.34);
     font-size: 30px;
     line-height: 48px;
     text-align: center;
-    color: #731D1C;
+    color: rgba(115, 29,28,1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -180,8 +180,8 @@ background: rgba(246, 204, 182, 0.34);
   }
 
   .google-button:hover {
-    color: #D96C81;
-    background: #FFFFFF;
+    color: rgba(217,108,129,1);
+    background: rgba(255,255,255,1);
     box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.25);
   }
 
@@ -192,8 +192,8 @@ background: rgba(246, 204, 182, 0.34);
   width: 65%;
     margin: 0 auto 1.5rem auto;
   gap: 0.5rem;
-  background: #731D1C;
-color: #F6CCB6;
+  background: rgba(115, 29,28,1);
+color: rgba(246,204,182,1);
 padding: 0.5rem 1.1rem;
  border-radius: 81.0624px;
  box-shadow: 0px 6.485px 6.485px rgba(0, 0, 0, 0.25);
@@ -308,7 +308,7 @@ background: rgba(246, 204, 182, 0.34);
     font-size: 2.6vw;
     line-height: 36px;
     text-align: center;
-    color: #731D1C;
+    color: rgba(115, 29,28,1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -323,8 +323,8 @@ background: rgba(246, 204, 182, 0.34);
   width: 65%;
     margin: 0 auto 1.5rem auto;
   gap: 0.5rem;
-  background: #731D1C;
-color: #F6CCB6;
+  background: rgba(115, 29,28,1);
+color: rgba(246,204,182,1);
 padding: 0.5rem 1.1rem;
  border-radius: 81.0624px;
  box-shadow: 0px 6.485px 6.485px rgba(0, 0, 0, 0.25);
@@ -400,7 +400,7 @@ background: rgba(246, 204, 182, 0.34);
     font-size: 4vw;
     line-height: 58px;
     text-align: center;
-    color: #731D1C;
+    color: rgba(115, 29,28,1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -409,8 +409,8 @@ background: rgba(246, 204, 182, 0.34);
   }
 
   .google-button:hover {
-    color: #D96C81;
-    background: #FFFFFF;
+    color: rgba(217,108,129,1);
+    background: rgba(255,255,255,1);
     box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.25);
   }
    .google-button {
@@ -420,8 +420,8 @@ background: rgba(246, 204, 182, 0.34);
   width: 65%;
     margin: 0 auto 1.5rem auto;
   gap: 0.5rem;
-  background: #731D1C;
-color: #F6CCB6;
+  background: rgba(115, 29,28,1);
+color: rgba(246,204,182,1);
 padding: 0.5rem 1.1rem;
  border-radius: 81.0624px;
  box-shadow: 0px 6.485px 6.485px rgba(0, 0, 0, 0.25);
@@ -519,7 +519,7 @@ background: rgba(246, 204, 182, 0.34);
     font-size: 4vw;
     line-height: 36px;
     text-align: center;
-    color: #731D1C;
+    color: rgba(115, 29,28,1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -528,8 +528,8 @@ background: rgba(246, 204, 182, 0.34);
   }
 
   .google-button:hover {
-    color: #D96C81;
-    background: #FFFFFF;
+    color: rgba(217,108,129,1);
+    background: rgba(255,255,255,1);
     box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.25);
   }
 
@@ -540,8 +540,8 @@ background: rgba(246, 204, 182, 0.34);
   width: 78%;
     margin: 0 auto 1.5rem auto;
   gap: 0.5rem;
-  background: #731D1C;
-color: #F6CCB6;
+  background: rgba(115, 29,28,1);
+color: rgba(246,204,182,1);
 padding: 0.5rem 1.1rem;
  border-radius: 81.0624px;
  box-shadow: 0px 6.485px 6.485px rgba(0, 0, 0, 0.25);
@@ -629,8 +629,8 @@ background: rgba(246, 204, 182, 0.34);
   width: 83%;
     margin: 0 auto 1.5rem auto;
   gap: 0.5rem;
-  background: #731D1C;
-color: #F6CCB6;
+  background: rgba(115, 29,28,1);
+color: rgba(246,204,182,1);
 padding: 0.5rem 1.1rem;
  border-radius: 81.0624px;
  box-shadow: 0px 6.485px 6.485px rgba(0, 0, 0, 0.25);
@@ -700,8 +700,8 @@ background: rgba(246, 204, 182, 0.34);
   width: 65%;
     margin: 0 auto 1.5rem auto;
   gap: 0.5rem;
-  background: #731D1C;
-color: #F6CCB6;
+  background: rgba(115, 29,28,1);
+color: rgba(246,204,182,1);
 padding: 0.5rem 1.1rem;
  border-radius: 81.0624px;
  box-shadow: 0px 6.485px 6.485px rgba(0, 0, 0, 0.25);
@@ -778,8 +778,8 @@ background: rgba(246, 204, 182, 0.34);
   width: 72%;
     margin: 0 auto 1.5rem auto;
   gap: 0.5rem;
-  background: #731D1C;
-color: #F6CCB6;
+  background: rgba(115, 29,28,1);
+color: rgba(246,204,182,1);
 padding: 0.5rem 1.1rem;
  border-radius: 81.0624px;
  box-shadow: 0px 6.485px 6.485px rgba(0, 0, 0, 0.25);
@@ -861,8 +861,8 @@ background: rgba(246, 204, 182, 0.34);
   width: 72%;
     margin: 0 auto 1.5rem auto;
   gap: 0.5rem;
-  background: #731D1C;
-color: #F6CCB6;
+  background: rgba(115, 29,28,1);
+color: rgba(246,204,182,1);
 padding: 0.5rem 1.1rem;
  border-radius: 81.0624px;
  box-shadow: 0px 6.485px 6.485px rgba(0, 0, 0, 0.25);
@@ -896,4 +896,56 @@ padding: 0.5rem 1.1rem;
     color: #4D2E5A;
   }
 
+}
+@media screen and (min-width:1024px) and (max-height:600px) {
+    .login-card {
+    background: rgba(246, 204, 182, 0.34);
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.25);
+    max-width: 254px;
+    width: 55%;
+    height: 69%;
+    margin-right: 5vw;
+    z-index: 1;
+    margin-bottom: 60px;
+    position: relative;
+    bottom: 7vh;
+    left: 19px;
+  }
+    .Title {
+    font-size: 1.3vw;
+  }
+    .text {
+    width: 116px;
+    height: 36px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 501;
+    font-size: 0.8vw;
+  }
+  .google-button{
+    width: 78%;
+  }
+  .confidential-text{
+    font-size: 1vw;
+  }
+  .container1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 74vw;
+    height: 100vh;
+    margin-right: -20vw;
+  }
+
+  .heart-animation-svg {
+    max-height: 110%;
+    position: relative;
+    height: auto;
+    max-width: 120%;
+  }
+  .animated-path{
+    display: block;
+  }
 }
