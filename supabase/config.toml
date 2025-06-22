@@ -1,7 +1,7 @@
 # For detailed configuration reference documentation, visit:
 # https://supabase.com/docs/guides/local-development/cli/config
 # A string used to distinguish different Supabase projects on the same host. Defaults to the
-# working directory name when running supabase init.
+# working directory name when running `supabase init`.
 project_id = "YDO"
 
 [api]
@@ -9,7 +9,7 @@ enabled = true
 # Port to use for the API URL.
 port = 54321
 # Schemas to expose in your API. Tables, views and stored procedures in this schema will get API
-# endpoints. public and graphql_public schemas are included by default.
+# endpoints. `public` and `graphql_public` schemas are included by default.
 schemas = ["public", "graphql_public"]
 # Extra schemas to add to the search_path of every request.
 extra_search_path = ["public", "extensions"]
@@ -35,7 +35,7 @@ enabled = false
 # Port to use for the local connection pooler.
 port = 54329
 # Specifies when a server connection can be reused by other clients.
-# Configure one of the supported pooler modes: transaction, session.
+# Configure one of the supported pooler modes: `transaction`, `session`.
 pool_mode = "transaction"
 # How many server connections to allow per user/database pair.
 default_pool_size = 20
@@ -106,7 +106,7 @@ enabled = true
 # The base URL of your website. Used as an allow-list for redirects and for constructing URLs used
 # in emails.
 site_url = "http://localhost:5173"
-# A list of exact URLs that auth providers are permitted to redirect to post authentication.
+# A list of *exact* URLs that auth providers are permitted to redirect to post authentication.
 additional_redirect_urls = ["http://localhost:5173", "http://127.0.0.1:5173"]
 # How long tokens are valid for, in seconds. Defaults to 3600 (1 hour), maximum 604,800 (1 week).
 jwt_expiry = 3600
@@ -124,7 +124,7 @@ enable_manual_linking = false
 # Passwords shorter than this value will be rejected as weak. Minimum 6, recommended 8 or more.
 minimum_password_length = 6
 # Passwords that do not meet the following requirements will be rejected as weak. Supported values
-# are: letters_digits, lower_upper_letters_digits, lower_upper_letters_digits_symbols
+# are: `letters_digits`, `lower_upper_letters_digits`, `lower_upper_letters_digits_symbols`
 password_requirements = ""
 
 [auth.rate_limit]
@@ -141,7 +141,7 @@ sign_in_sign_ups = 30
 # Number of OTP / Magic link verifications that can be made in a 5 minute interval per IP address.
 token_verifications = 30
 
-# Configure one of the supported captcha providers: hcaptcha, turnstile.
+# Configure one of the supported captcha providers: `hcaptcha`, `turnstile`.
 # [auth.captcha]
 # enabled = true
 # provider = "hcaptcha"
@@ -205,7 +205,7 @@ max_frequency = "5s"
 # enabled = true
 # uri = "pg-functions://<database>/<schema>/<hook_name>"
 
-# Configure one of the supported SMS providers: twilio, twilio_verify, messagebird, textlocal, vonage.
+# Configure one of the supported SMS providers: `twilio`, `twilio_verify`, `messagebird`, `textlocal`, `vonage`.
 [auth.sms.twilio]
 enabled = false
 account_sid = ""
@@ -236,9 +236,9 @@ max_frequency = "5s"
 # enroll_enabled = true
 # verify_enabled = true
 
-# Use an external OAuth provider. The full list of providers are: apple, azure, bitbucket,
-# discord, facebook, github, gitlab, google, keycloak, linkedin_oidc, notion, twitch,
-# twitter, slack, spotify, workos, zoom.
+# Use an external OAuth provider. The full list of providers are: `apple`, `azure`, `bitbucket`,
+# `discord`, `facebook`, `github`, `gitlab`, `google`, `keycloak`, `linkedin_oidc`, `notion`, `twitch`,
+# `twitter`, `slack`, `spotify`, `workos`, `zoom`.
 
 [auth.external.google]
 enabled = true
@@ -284,8 +284,8 @@ enabled = false
 
 [edge_runtime]
 enabled = true
-# Configure one of the supported request policies: oneshot, per_worker.
-# Use oneshot for hot reload, or per_worker for load testing.
+# Configure one of the supported request policies: `oneshot`, `per_worker`.
+# Use `oneshot` for hot reload, or `per_worker` for load testing.
 policy = "oneshot"
 # Port to attach the Chrome inspector for debugging edge functions.
 inspector_port = 8083
@@ -298,7 +298,7 @@ deno_version = 1
 [analytics]
 enabled = false
 port = 54327
-# Configure one of the supported backends: postgres, bigquery.
+# Configure one of the supported backends: `postgres`, `bigquery`.
 backend = "postgres"
 
 # Experimental features may be deprecated any time
