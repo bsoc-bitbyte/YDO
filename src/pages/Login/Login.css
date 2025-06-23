@@ -1,78 +1,951 @@
-.login-container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.google-btn {
+html,
+body {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  background-size: cover;
+  overflow: hidden;
+}
+.login-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 4px;
-  background-color: #24292e;
-  color: white;
-  font-size: 16px;
-  font-weight: 500;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.login-card {
+background: rgba(246, 204, 182, 0.34);
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+ max-width: 340px;
+  width: 30%;
+  margin-right: 5vw;
+  z-index: 1;
+  margin-top: 35vh;
+}
+.Title {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 48px;
+  font-family: 'Poppins';
+  text-align: center;
+  color: rgba(115, 29,28,1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+}
+
+.google-button:hover {
+  color: rgba(217,108,129,1);
+  background: rgba(255,255,255,1);
+  box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.25);
+}
+ .google-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15vw;
+    margin: 0 auto 1.5rem auto;
+  gap: 0.5rem;
+  background: rgba(115, 29,28,1);
+color: rgba(246,204,182,1);
+padding: 0.5rem 1.1rem;
+ border-radius: 81.0624px;
+ box-shadow: 0px 6.485px 6.485px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-  transition: background-color 0.2s;
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+  margin-top: 8vh;
 }
-
-.google-btn:hover {
-  background-color: #1b1f23;
-}
-
-.google-btn:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-}
-
 .google-icon {
-  fill: white;
+  width: 25px;
+  height: 25px;
+  background: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg') no-repeat center;
+  background-size: contain;
+}
+.confidential-text {
+  width: 299px;
+  height: 67px;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+   color: rgba(115, 29,28,1);
 }
 
-.error-message {
-  color: #e53935;
-  margin-top: 10px;
+.text {
+  width: 148px;
+  height: 36px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 501;
+  font-size: 1.3vw;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 0.02em;
 }
 
-.logged-in {
-  display: flex;
-  flex-direction: column;
+.container1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 74vw;
+  height: 100vh;
+  margin-right: 8vw;
+}
+
+.heart-animation-svg {
+  max-height: 110%;
+  position: relative;
+  height: auto;
+  max-width: 120%;
+}
+
+@media screen and (min-width:1024px) and (max-width:1256px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  .data {
+    display: none;
+  }
+
+  .login-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .login-card {
+background: rgba(246, 204, 182, 0.34);
+    padding: 2.6rem 1.4rem;
+    border-radius: 20px;
+    box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.25);
+    max-width: 320px;
+    width: 40%;
+    height: 50vh;
+    margin-right: 2vw;
+    z-index: 1;
+    margin-bottom: 10vw;
+    position: absolute;
+    left: 62vw;
+
+  }
+
+  .Title {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 48px;
+    text-align: center;
+    color: rgba(115, 29,28,1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.2rem auto;
+    margin-top: 10px;
+  }
+
+  .google-button:hover {
+    color: rgba(217,108,129,1);
+    background: rgba(255,255,255,1);
+    box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .google-button {
+    display: flex;
+  justify-content: center;
   align-items: center;
-}
-
-.user-info {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-.avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.logout-btn {
-  padding: 8px 16px;
-  background-color: #f44336;
-  color: white;
-  border: none;
-  border-radius: 4px;
+  width: 65%;
+    margin: 0 auto 1.5rem auto;
+  gap: 0.5rem;
+  background: rgba(115, 29,28,1);
+color: rgba(246,204,182,1);
+padding: 0.5rem 1.1rem;
+ border-radius: 81.0624px;
+ box-shadow: 0px 6.485px 6.485px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-  transition: background-color 0.2s;
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+  margin-top: 8vh;
+  }
+
+  .google-icon {
+    width: 22px;
+    height: 22px;
+    background: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg') no-repeat center;
+    background-size: contain;
+  }
+
+  .confidential-text {
+    width: 100%;
+    height: 95px;
+    font-size: 19px;
+    line-height: 30px;
+    text-align: center;
+    color: #4D2E5A;
+  }
+
+  .text {
+    width: 148px;
+    height: 36px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 502;
+    font-size: 1.3vw;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+
+  .container1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 74vw;
+    height: 100vh;
+    margin-right: -20vw;
+  }
+
+  .heart-animation-svg {
+    max-height: 110%;
+    position: relative;
+    height: auto;
+    max-width: 120%;
+  }
 }
 
-.logout-btn:hover {
-  background-color: #d32f2f;
+@media screen and (min-width:768px) and (max-width:1024px) {
+  .container {
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+
+  .login-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .login-card {
+background: rgba(246, 204, 182, 0.34);
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.25);
+    max-width: 310px;
+    width: 35%;
+    height: 50vh;
+    margin-right: 5vw;
+    z-index: 1;
+    margin-bottom: 60px;
+    position: relative;
+    bottom: 332px;
+    left: 247px;
+  }
+
+  .container1 {
+    position: relative;
+    top: 35vw;
+    left: -3vw;
+    width: 95vw;
+    height: 100vh;
+    margin-right: 8vw;
+  }
+
+  .confidential-text {
+    width: 100%;
+    height: 115px;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #4D2E5A;
+  }
+
+  .Title {
+    font-weight: 600;
+    font-size: 2.6vw;
+    line-height: 36px;
+    text-align: center;
+    color: rgba(115, 29,28,1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.2rem auto;
+    margin-top: 10px;
+  }
+
+   .google-button {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+    margin: 0 auto 1.5rem auto;
+  gap: 0.5rem;
+  background: rgba(115, 29,28,1);
+color: rgba(246,204,182,1);
+padding: 0.5rem 1.1rem;
+ border-radius: 81.0624px;
+ box-shadow: 0px 6.485px 6.485px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+  margin-top: 8vh;
+  }
+
+  .text {
+    width: 148px;
+    height: 36px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 501;
+    font-size: 1.4vw;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+  .google-icon{
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+}
+
+@media screen and (min-width:600px) and (max-width:768px) {
+  .container {
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  .login-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .login-card {
+background: rgba(246, 204, 182, 0.34);
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.25);
+    max-width: 350px;
+    width: 84%;
+    margin-right: 5vw;
+    z-index: 1;
+    margin-bottom: 60px;
+    bottom: 579px;
+    left: 19px;
+    position: relative;
+  }
+
+  .container1 {
+    position: relative;
+    top: 64vw;
+    left: 32vw;
+    width: 101vw;
+    height: 100vh;
+    margin-right: 8vw;
+  }
+
+  .Title {
+    font-weight: 600;
+    font-size: 4vw;
+    line-height: 58px;
+    text-align: center;
+    color: rgba(115, 29,28,1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    margin-top: 20px;
+  }
+
+  .google-button:hover {
+    color: rgba(217,108,129,1);
+    background: rgba(255,255,255,1);
+    box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.25);
+  }
+   .google-button {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+    margin: 0 auto 1.5rem auto;
+  gap: 0.5rem;
+  background: rgba(115, 29,28,1);
+color: rgba(246,204,182,1);
+padding: 0.5rem 1.1rem;
+ border-radius: 81.0624px;
+ box-shadow: 0px 6.485px 6.485px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+  margin-top: 8vh;
+  }
+
+  .google-icon {
+    width: 23px;
+    height: 23px;
+    background: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg') no-repeat center;
+    background-size: contain;
+  }
+
+  .confidential-text {
+    width: 300px;
+    height: 95px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #4D2E5A;
+  }
+
+  .text {
+    width: 148px;
+    height: 36px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 501;
+    font-size: 2.2vw;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+
+  .animated-path {
+    display: none;
+  }
+
+  .heart-animation-svg {
+    animation: none;
+  }
+}
+
+@media (max-width:600px) {
+  .container {
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    overflow: auto;
+  }
+
+
+  .login-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .login-card {
+background: rgba(246, 204, 182, 0.34);
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.25);
+    max-width: 300px;
+    width: 52%;
+    height: 52%;
+    margin-right: 5vw;
+    z-index: 1;
+    margin-bottom: 60px;
+    position: relative;
+    bottom: 65vh;
+    left: 19px;
+  }
+
+  .container1 {
+    position: relative;
+    top: 56vh;
+    left: 42vw;
+    width: 131vw;
+    height: 100vh;
+    margin-right: 8vw;
+  }
+
+  .Title {
+    font-weight: 600;
+    font-size: 4vw;
+    line-height: 36px;
+    text-align: center;
+    color: rgba(115, 29,28,1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    margin-top: 9px;
+  }
+
+  .google-button:hover {
+    color: rgba(217,108,129,1);
+    background: rgba(255,255,255,1);
+    box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.25);
+  }
+
+    .google-button {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 78%;
+    margin: 0 auto 1.5rem auto;
+  gap: 0.5rem;
+  background: rgba(115, 29,28,1);
+color: rgba(246,204,182,1);
+padding: 0.5rem 1.1rem;
+ border-radius: 81.0624px;
+ box-shadow: 0px 6.485px 6.485px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+  margin-top: 8vh;
+  }
+
+  .google-icon {
+    width: 18px;
+    height: 18px;
+    background: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg') no-repeat center;
+    background-size: contain;
+  }
+
+  .confidential-text {
+    width: 105%;
+    height: 20%;
+    font-size: 17px;
+    line-height: 30px;
+    text-align: center;
+    color: #4D2E5A;
+  }
+
+  .text {
+    width: 158px;
+    height: 48px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 501;
+    font-size: 2vw;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+
+  .animated-path {
+    display: none;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width:420px) {
+  .container1 {
+    position: relative;
+    top: 53vh;
+    left: 43vw;
+    width: 131vw;
+    height: 100vh;
+    margin-right: 8vw;
+  }
+
+  .login-card {
+background: rgba(246, 204, 182, 0.34);
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.25);
+    max-width: 199px;
+    width: 55%;
+    height: 55%;
+    margin-right: 5vw;
+    z-index: 1;
+    margin-bottom: 60px;
+    position: relative;
+      bottom: 61vh;
+    left: 19px;
+  }
+  .container{
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Title {
+    font-size: 3.5vw;
+  }
+
+  .google-button {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 83%;
+    margin: 0 auto 1.5rem auto;
+  gap: 0.5rem;
+  background: rgba(115, 29,28,1);
+color: rgba(246,204,182,1);
+padding: 0.5rem 1.1rem;
+ border-radius: 81.0624px;
+ box-shadow: 0px 6.485px 6.485px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+  margin-top: 8vh;
+  }
+
+  .google-icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  .text {
+    width: 116px;
+    height: 36px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 501;
+    font-size: 1.6vw;
+    line-height: 38px;
+  }
+
+  .confidential-text {
+    font-size: 13px;
+   line-height: 25px;
+  }
+}
+@media (max-height:399px){
+    .container1 {
+    position: relative;
+    top: 113vh;
+    left: 17vw;
+    width: 131vw;
+    height: 100vh;
+    margin-right: 8vw;
+  }
+ 
+  .login-card {
+background: rgba(246, 204, 182, 0.34);
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.25);
+    max-width: 254px;
+    width: 55%;
+    height: 85%;
+    margin-right: 5vw;
+    z-index: 1;
+    margin-bottom: 60px;
+    position: relative;
+      bottom: 65vh;
+    left: 19px;
+  }
+  .container{
+    overflow-y: auto;
+  }
+  .Title {
+    font-size: 2.2vw;
+  }
+
+  .google-button {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+    margin: 0 auto 1.5rem auto;
+  gap: 0.5rem;
+  background: rgba(115, 29,28,1);
+color: rgba(246,204,182,1);
+padding: 0.5rem 1.1rem;
+ border-radius: 81.0624px;
+ box-shadow: 0px 6.485px 6.485px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+  margin-top: 8vh;
+  }
+
+  .google-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .text {
+    width: 116px;
+    height: 36px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 501;
+    font-size: 1.4vw;
+  }
+
+ .confidential-text {
+    width: 105%;
+    height: 20vh;
+    font-size: 1.5vw;
+    line-height: 30px;
+    text-align: center;
+    color: #4D2E5A;
+  }
+
+  .animated-path{
+    display: none;
+  }
+}
+@media (max-height:600px){
+     .container1 {
+    position: relative;
+    top: 113vh;
+    left: 17vw;
+    width: 131vw;
+    height: 100vh;
+    margin-right: 8vw;
+  }
+ 
+  .login-card {
+background: rgba(246, 204, 182, 0.34);
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.25);
+    max-width: 254px;
+    width: 55%;
+    height: 102%;
+    margin-right: 5vw;
+    z-index: 1;
+    margin-bottom: 60px;
+    position: relative;
+      bottom: 65vh;
+    left: 19px;
+  }
+  .container{
+    overflow-y: auto;
+  }
+  .Title {
+    font-size: 2.2vw;
+  }
+
+  .google-button {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 72%;
+    margin: 0 auto 1.5rem auto;
+  gap: 0.5rem;
+  background: rgba(115, 29,28,1);
+color: rgba(246,204,182,1);
+padding: 0.5rem 1.1rem;
+ border-radius: 81.0624px;
+ box-shadow: 0px 6.485px 6.485px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+  margin-top: 8vh;
+  }
+
+  .google-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .text {
+    width: 116px;
+    height: 36px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 501;
+    font-size: 1vw;
+  }
+
+ .confidential-text {
+    width: 105%;
+    height: 20vh;
+    font-size: 1.8vw;
+    line-height: 30px;
+    text-align: center;
+    color: #4D2E5A;
+  }
+
+  .animated-path{
+    display: none;
+  }
+}
+@media screen and (min-height: 680px) and (max-height: 720px){
+   .confidential-text{
+    font-size: 1.3vw;
+    width: 199px;
+  }
+  
+     .container1 {
+    position: relative;
+    top: -1vh;
+    left: -3vw;
+    width: 131vw;
+    height: 100vh;
+    margin-right: 8vw;
+  }
+ 
+  .login-card {
+background: rgba(246, 204, 182, 0.34);
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.25);
+    max-width: 254px;
+    width: 55%;
+    height: 67%;
+    margin-right: 5vw;
+    z-index: 1;
+    margin-bottom: 60px;
+    position: relative;
+    bottom: 26vh;
+    left: 19px;
+  }
+  .container{
+    overflow-y: auto;
+  }
+  .Title {
+    font-size: 1.4vw;
+  }
+
+  .google-button {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 72%;
+    margin: 0 auto 1.5rem auto;
+  gap: 0.5rem;
+  background: rgba(115, 29,28,1);
+color: rgba(246,204,182,1);
+padding: 0.5rem 1.1rem;
+ border-radius: 81.0624px;
+ box-shadow: 0px 6.485px 6.485px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+  margin-top: 8vh;
+  }
+
+  .google-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .text {
+    width: 116px;
+    height: 36px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 501;
+    font-size: 0.7vw;
+  }
+
+ .confidential-text {
+    width: 105%;
+    height: 20vh;
+    font-size: 1vw;
+    line-height: 30px;
+    text-align: center;
+    color: #4D2E5A;
+  }
+
+}
+@media screen and (min-width:1024px) and (max-height:600px) {
+    .login-card {
+    background: rgba(246, 204, 182, 0.34);
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 11px 11px 4px rgba(0, 0, 0, 0.25);
+    max-width: 254px;
+    width: 55%;
+    height: 69%;
+    margin-right: 5vw;
+    z-index: 1;
+    margin-bottom: 60px;
+    position: relative;
+    bottom: 7vh;
+    left: 19px;
+  }
+    .Title {
+    font-size: 1.3vw;
+  }
+    .text {
+    width: 116px;
+    height: 36px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 501;
+    font-size: 0.8vw;
+  }
+  .google-button{
+    width: 78%;
+  }
+  .confidential-text{
+    font-size: 1vw;
+  }
+  .container1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 74vw;
+    height: 100vh;
+    margin-right: -20vw;
+  }
+
+  .heart-animation-svg {
+    max-height: 110%;
+    position: relative;
+    height: auto;
+    max-width: 120%;
+  }
+  .animated-path{
+    display: block;
+  }
 }

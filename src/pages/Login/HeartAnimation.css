@@ -1,0 +1,14 @@
+.animated-path {
+  stroke-dasharray: 2400.8;
+  stroke-dashoffset: 2400.8;
+  animation: drawHeart 5s ease forwards;
+}
+
+@keyframes drawHeart {
+  from {
+    stroke-dashoffset: 2400.8;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
