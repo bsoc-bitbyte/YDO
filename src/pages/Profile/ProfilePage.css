@@ -10,7 +10,7 @@
 
 .profile-container {
   min-height: 100vh;
-  background-color: #18181b;
+  background-color: rgba(24 24 27);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,7 +23,7 @@
   position: absolute;
   top: 32px;
   left: 32px;
-  color: #a1a1aa;
+  color: rgba(161 161 170);
   font-size: 20px;
   font-weight: 500;
 }
@@ -89,23 +89,23 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 48px;
+  gap: 24px;
   text-align: left;
   width: 330px;
-  padding-top: 1px;
+  padding-top: 80px;
   font-size: 1.6rem;
 }
 
 .profile-name,
 .name-input {
   min-height: 60px;
-  font-size: 4.5rem;
+  font-size: 3.7rem;
+  width: 250px;
   font-weight: bold;
-  color: #f6ccb6;
+  color: rgba(246 204 182);
   display: flex;
   align-items: center;
   line-height: 1.2;
-  width: 100%;
 }
 
 .profile-name {
@@ -115,7 +115,7 @@
 .name-input {
   background-color: transparent;
   border: none;
-  border-bottom: 0px solid #f6ccb6;
+  border-bottom: 1px solid rgba(246 204 182);
   outline: none;
   padding: 0;
   margin: 0;
@@ -124,19 +124,18 @@
 
 .profile-bio,
 .bio-textarea {
-  height: 100px;
-  min-height: 100px;
-  max-height: 100px;
-  width: 100%;
-  max-width: 340px;
-
+  height: 180px;
+  min-height: 185px;
+  max-height: 185px;
+  width: 300px;
+  max-width: 300px;
   font-family: inherit;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   line-height: 1.8;
-  color: #4d2e5a;
+  color: rgba(246 204 182);
 
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   box-sizing: border-box;
   border-radius: 6px;
 
@@ -145,11 +144,12 @@
   white-space: pre-wrap;
 
   display: block;
+  flex-shrink: 0;
 }
 
 .bio-textarea {
   background-color: transparent;
-  border: none;
+  border: 1px solid rgba(246 204 182);
   outline: none;
   resize: none;
   overflow-y: auto;
@@ -165,19 +165,20 @@
 }
 
 .tag {
-  padding: 6px 12px;
-  background-color: transparent;
-  color: #4d2e5a;
-  border-radius: 16px;
+  padding: 2px 12px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgb(255 255 255);
+  border: rgba(255 255 255);
+  border-radius: 12px;
   font-size: 1.1rem;
-  border: 1px solid #e19b9a;
+  border: 1px solid rgb(255 255 255);
   transition: background-color 0.2s ease;
 }
 
 .tag-remove-button {
   background: none;
   border: none;
-  color: #4d2e5a;
+  color: rgba(77 46 90);
   font-weight: bold;
   font-size: 16px;
   margin-left: 8px;
@@ -187,7 +188,7 @@
 }
 
 .tag-remove-button:hover {
-  color: #d33;
+  color: rgba(221 51 51);
 }
 
 .tag-input-wrapper {
@@ -198,7 +199,7 @@
 
 .tag-add-button {
   background-color: transparent;
-  color: #4d2e5a;
+  color: rgba(77 46 90);
   font-weight: bold;
   border: none;
   border-radius: 50%;
@@ -214,13 +215,13 @@
 }
 
 .tag-add-button:hover {
-  color: #e0b9a1;
+  color: rgba(224 185 161);
 }
 
 .tag-input {
   background-color: transparent;
-  border: 1px solid #e19b9a;
-  color: #4d2e5a;
+  border: 1px solid rgba(225 155 154);
+  color: rgba(255 255 255);
   font-size: 1.1rem;
   border-radius: 16px;
   padding: 6px 10px;
@@ -230,7 +231,7 @@
 
 .divider {
   width: 1px;
-  background-color: #f6ccb6;
+  background-color: rgba(246 204 182);
   margin-left: -5px;
   margin-right: 10px;
   align-self: stretch;
@@ -245,7 +246,7 @@
   justify-content: flex-start;
   gap: 10px;
   margin-left: 40px;
-  padding-top: 24px;
+  padding-top: 70px;
   min-height: 400px;
 }
 
@@ -265,21 +266,40 @@
 }
 
 .branch-year {
-  color: #4d2e5a;
+  color: rgba(77 46 90);
   font-size: 40px;
   font-weight: 600;
   padding-left: 6px;
+  min-height: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-sizing: border-box;
 }
+
 .branch-input {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #a855f7;
+  border-bottom: 1px solid rgba(246 204 182);
   outline: none;
-  color: #4d2e5a;
+  color: rgb(77 46 90);
   font-size: 40px;
   font-weight: 600;
-  margin-right: 10px;
-  width: 90px;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.branch-input:first-of-type {
+  width: 160px;
+}
+
+.branch-input:last-of-type {
+  width: 180px;
 }
 
 .detail-row {
@@ -287,27 +307,31 @@
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
+  min-height: 48px;
 }
 .detail-label {
-  color: #4d2e5a;
+  color: rgba(246 204 182);
   font-weight: 600;
   margin-right: 10px;
   min-width: auto;
   white-space: nowrap;
 }
 .detail-value {
-  color: #f6ccb6;
+  color: rgba(246 204 182);
 }
 .detail-input {
   background-color: transparent;
-  width: 180px;
+  width: 155px;
   border: none;
-  border-bottom: 1px solid #f6ccb6;
+  border-bottom: 1px solid rgba(246 204 182);
   outline: none;
-  color: #f6ccb6;
+  color: rgba(246 204 182);
   font-size: 20px;
-  flex: 1;
-  min-width: auto;
+  height: 32px;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: inherit;
+  font-weight: inherit;
 }
 .detail-label,
 .detail-input,
@@ -318,8 +342,8 @@
 .save-button {
   margin-top: 32px;
   padding: 14px 28px;
-  background-color: #7c3aed;
-  color: white;
+  background-color: rgba(124 58 237);
+  color: rgba(255 255 255);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -329,7 +353,7 @@
   transition: background-color 0.2s;
 }
 .save-button:hover {
-  background-color: #6d28d9;
+  background-color: rgb(109 40 217);
 }
 
 @media (max-width: 768px) {
@@ -376,7 +400,7 @@
 
   .profile-name,
   .name-input {
-    font-size: 26px;
+    font-size: 40px;
     text-align: center;
     min-height: 44px;
   }
@@ -418,11 +442,22 @@
 
   .branch-year {
     font-size: 20px;
+    min-height: 40px;
+    height: 40px;
+    gap: 10px;
   }
 
   .branch-input {
     font-size: 18px;
-    width: 70px;
+    height: 35px;
+  }
+
+  .branch-input:first-of-type {
+    width: 100px;
+  }
+
+  .branch-input:last-of-type {
+    width: 120px;
   }
 
   .detail-row {

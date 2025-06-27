@@ -6,16 +6,16 @@ import closeButton from "../../assets/profile-images/closeButton.png";
 import "./ProfilePage.css";
 
 const initialProfile = {
-  name: "Cherry!!!",
-  dob: "01/06/2006",
+  name: "Cherry J",
+  dob: "30/02/2004",
   gender: "Female",
   orientation: "Straight",
   interestedIn: "Men",
-  height: "6.2",
-  branch: "B.Tech",
+  height: "5.1",
+  branch: "B.des",
   year: "2nd Year",
   bio: "Trying to find someone who will give me laugh lines instead of frown lines...👀",
-  tags: ["Foodie🍱", "Sober🛑", "Bad Texter💬", "Non-Smoker🚭"],
+  tags: ["Foodie🍱", "Cancer♋️", "Sober⛔️", "Non-Smoker🚭", "Religious✨"],
   image: profilePhoto,
 };
 
@@ -190,12 +190,14 @@ export default function ProfilePage() {
                     value={profile.branch}
                     onChange={handleChange}
                     className="branch-input"
+                    style={{ width: '120px' }}
                   />
                   <input
                     name="year"
                     value={profile.year}
                     onChange={handleChange}
                     className="branch-input"
+                    style={{ width: '160px' }}
                   />
                 </>
               ) : (
