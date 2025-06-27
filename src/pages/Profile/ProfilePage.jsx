@@ -6,16 +6,16 @@ import closeButton from "../../assets/profile-images/closeButton.png";
 import "./ProfilePage.css";
 
 const initialProfile = {
-  name: "Cherry!!!",
-  dob: "01/06/2006",
+  name: "Cherry J",
+  dob: "30/02/2004",
   gender: "Female",
   orientation: "Straight",
   interestedIn: "Men",
-  height: "6.2",
-  branch: "B.Tech",
+  height: "5.1",
+  branch: "B.des",
   year: "2nd Year",
   bio: "Trying to find someone who will give me laugh lines instead of frown lines...👀",
-  tags: ["Foodie🍱", "Sober🛑", "Bad Texter💬", "Non-Smoker🚭"],
+  tags: ["Foodie🍱", "Cancer♋️", "Sober⛔️", "Non-Smoker🚭", "Religious✨"],
   image: profilePhoto,
 };
 
@@ -182,26 +182,26 @@ export default function ProfilePage() {
           <div className="divider"></div>
 
           <div className="right-section">
-            <div className="branch-year fixed-height">
-              {isEditing ? (
-                <>
-                  <input
-                    name="branch"
-                    value={profile.branch}
-                    onChange={handleChange}
-                    className="branch-input"
-                  />
-                  <input
-                    name="year"
-                    value={profile.year}
-                    onChange={handleChange}
-                    className="branch-input"
-                  />
-                </>
-              ) : (
-                `${profile.branch}, ${profile.year}`
-              )}
-            </div>
+            {isEditing ? (
+              <div className="branch-year fixed-height">
+                <input
+                  name="branch"
+                  value={profile.branch}
+                  onChange={handleChange}
+                  className="branch-input"
+                />
+                <input
+                  name="year"
+                  value={profile.year}
+                  onChange={handleChange}
+                  className="branch-input"
+                />
+              </div>
+            ) : (
+              <div className="branch-year fixed-height">
+                {`${profile.branch}, ${profile.year}`}
+              </div>
+            )}
 
             {["dob", "gender", "orientation", "interestedIn", "height"].map(
               (field) => (
