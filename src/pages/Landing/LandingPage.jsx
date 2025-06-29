@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./LandingPage.css";
 import backgroundImage from "../../assets/Landingpage/bg.jpg";
-import YDOAnimation from "../../components/Animation/animation";
+import YDOAnimation from "../../components/Animation/Animation";
 import line from "../../assets/Landingpage/Line.svg";
 
 function Landingpage(){
