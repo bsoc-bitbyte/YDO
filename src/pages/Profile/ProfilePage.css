@@ -108,9 +108,6 @@
   line-height: 1.2;
 }
 
-.profile-name {
-  margin: 0;
-}
 
 .name-input {
   background-color: transparent;
@@ -268,17 +265,18 @@
   color: rgba(77 46 90);
   font-size: 40px;
   font-weight: 600;
+  padding: 0;
   padding-left: 6px;
   min-height: 60px;
   height: 60px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
   box-sizing: border-box;
   line-height: 1.2;
   margin: 0;
   width: 100%;
   position: relative;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
 }
 
 .branch-input {
@@ -291,38 +289,34 @@
   font-weight: 600;
   min-height: 60px;
   height: 60px;
-  display: flex;
-  align-items: center;
   line-height: 1.2;
   box-sizing: border-box;
   padding: 0;
-  padding-left: 6px;
   margin: 0;
-  white-space: nowrap;
   font-family: inherit;
+  position: absolute;
+  top: 0;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
   flex-shrink: 0;
 }
 
 .branch-input:first-of-type {
-  width: 110px;
-  position: absolute;
+  width: 120px;
+  min-width: 120px;
+  max-width: 120px;
   left: 6px;
-  top: 0;
+  padding-left: 0;
 }
 
 .branch-input:last-of-type {
-  width: 150px;
-  position: absolute;
-  left: 135px;
-  top: 0;
-}
-
-.branch-input:first-of-type {
-  width: 160px;
-}
-
-.branch-input:last-of-type {
-  width: 180px;
+  width: 140px;
+  min-width: 140px;
+  max-width: 140px;
+  left: 141px;
+  padding-left: 0;
 }
 
 .detail-row {
