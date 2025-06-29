@@ -13,7 +13,7 @@ function Landingpage(){
             <div className="landing_page_content">
                 <div id="ydo">
                     <div className="logo_y">Y</div>
-                    <div className="logo_d">D</div>
+                    <div className="logo_d">O</div>
                     <div className="image__wrapper">
                         <img src={arrowImage} alt="arrow" className="arrow" />
                     </div>
