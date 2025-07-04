@@ -6,7 +6,7 @@ import YDOAnimation from "../../components/Animation/Animation";
 import { checkLoginStatus } from "../../utils/checkLoginStatus";
 import { fetchUserData } from "../../utils/fetchUserData";
 import HeartSVG from "../../assets/Preloader/Heart.svg";
-import BG from "../../assets/preloader/background.png";
+import PreloaderBG from "../../assets/Preloader/background.png";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || "";
 
@@ -57,7 +57,7 @@ const Preloader = () => {
     return (
         <div className="preloader_page">
             <div
-                className="gradient_background"style={{background: `url(${BG}) center center/cover no-repeat`,}}></div>
+                className="gradient_background"style={{background: `url(${PreloaderBG}) center center/cover no-repeat`,}}></div>
             <div className="preloader_content">
                 {showAnimation && (
                     <div className="preloader_animation">
