@@ -35,32 +35,16 @@ html, body {
 }
 .landing_page_content{
     position: relative;
-    top:-7%;
+    top:1%;
 }
-#ydo{
-    color:rgba(246,204,182,1);
-    display: flex;
-    font-weight: 800;
-    font-size: 200px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    justify-content: center;
-    gap: 0.25rem;
-}
-.logo_d{
-    rotate: -37.9deg;
-}
-.arrow{
-    position:absolute;
-    width:220px;
-    height: 220px;
-    top:33%;
-    left: 44%;
-    transform: translate(-47%,-59%);
-}
-.logo_o{
-    position: relative;
-    display:inline-block;
+.animation {
+  position: relative;
+  scale: 2;
+  width: 380px;
+  height: 160px;
+  transform: translate(3%, -82%);
+  z-index: 0;
+  pointer-events: none;    
 }
 .landing_page p{
     display:flex;
@@ -140,14 +124,14 @@ html, body {
         width:clamp(300px,85vw,380px);
         gap:0.1rem; 
     }
-    #ydo{
-        font-size: 125px;
-        line-height: 100%;
-    }
-    .arrow{
-        width:150px;
-        height: 140px;
-        top:28.5%;
+    .animation {
+        scale: 1.6;
+        width: 325px;
+        height: 150px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-33%, -135%);    
     }
     .tagline{
         font-size: 22.5px;
@@ -176,16 +160,15 @@ html, body {
         width:clamp(300px,85vw,380px);
         gap:0.1rem; 
     }
-    #ydo{
-        font-size: 110px;
-        line-height: 100%;
-    }
-    .arrow{
-        width:120px;
-        height: 120px;
-        top:28.5%;
-        left:45%;
-    }
+    .animation {
+        scale: 1.2;
+        width: 380px;
+        height: 110px;
+        position: relative;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-43%, -25%);    
+    }    
     .tagline{
         font-size: 18px;
     }
@@ -211,16 +194,13 @@ html, body {
         width:clamp(300px,85vw,380px);
         gap:0.1rem; 
     }
-    #ydo{
-        font-size: 90px;
-        line-height: 100%;
-    }
-    .arrow{
-        width:95px;
-        height: 110px;
-        top:25.5%;
-        left:45.5%;
-    }
+    .animation {
+        width: 300px;
+        height: 150px;
+        scale: 1.3;
+        position: relative;        
+        transform: translate(0%, -40%);        
+    }    
     .tagline{
         font-size: 16px;
         padding-top:8px;
@@ -248,15 +228,13 @@ html, body {
         width:clamp(300px,85vw,380px);
         gap:0.1rem; 
     }
-    #ydo{
-        font-size: 90px;
-        line-height: 100%;
-    }
-    .arrow{
-        width:95px;
-        height: 110px;
-        top:25.5%;
-        left:46.5%;
+    .animation {
+        scale: 1.2;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-42%, -135%);
+
     }
     .tagline{
         font-size: 16px;
