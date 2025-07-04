@@ -28,7 +28,7 @@ const Login = ({ onLogin }) => {
   };
 
   if (loggedIn) {
-    window.location.href = "/";
+    window.location.href = "/home";
   }
   return (
     <>
