@@ -30,11 +30,9 @@ const Preloader = () => {
                 return;
             }
             setUserData(user);
-            // Wait for animation to finish
             setTimeout(() => {
                 setShowAnimation(false);
                 setShowContent(true);
-                // Start loading bar animation
                 setTimeout(() => {
                     const progressInterval = setInterval(() => {
                         setLoadingProgress(prev => {
@@ -45,7 +43,7 @@ const Preloader = () => {
                                 }, 1000);
                                 return 100;
                             }
-                            return prev + 2; //5 seconds
+                            return prev + 2;
                         });
                     }, 100);
                 }, 1200);
