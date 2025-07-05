@@ -5,21 +5,7 @@ import YDO from '../../assets/navbar-images/YDO-logo.png'
 import notification from '../../assets/navbar-images/notification-YDO.png'
 import Account from '../../assets/navbar-images/Account-YDO.png'
 import Settings from '../../assets/navbar-images/Settings-YDO.png'
-
-import { useEffect,useState } from 'react'
-import { checkLoginStatus } from '../../utils/checkLoginStatus.js'
-const API_BASE_URL = import.meta.env.VITE_API_URL || "";
-
 function Navbar() {
-const [isAuthenticated,setIsAuthenticated]=useState(false);
-useEffect(()=>{
-  const checkAuth=async ()=>{
-    const loggedIn=await checkLoginStatus(API_BASE_URL);
-    setIsAuthenticated(loggedIn);
-  };
-  checkAuth();
-},[])
-if(!isAuthenticated) return null;
   return (
     <>
       <svg width="0" height="0">
