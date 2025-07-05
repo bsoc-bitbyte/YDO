@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento:wght@400&display=swap');
+
+.preloader_page {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgba(246, 204, 182, 1);
+    font-family: 'Poppins', 'Work Sans', sans-serif;
+    font-display: swap;
+    position: relative;
+    overflow: hidden;
+}
+
+.gradient_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.preloader_content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0;
+    width: 90vw;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.preloader_animation {
+    position: relative;
+    width: min(90vw, 460px);
+    height: clamp(120px, 28vw, 220px);
+    z-index: 1;
+    pointer-events: none;
+    margin-bottom: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px;
+}
+
+.content_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    animation: slideInUp 0.6s ease-out;
+    min-height: 120px;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.welcome_message {
+    text-align: center;
+    margin-bottom: 1rem;
+    animation: fadeInUp 0.6s ease-out;
+    width: 100%;
+}
+
+.ydo_logo_section {
+    text-align: center;
+    margin-bottom: 1rem;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.ydo_text {
+    font-size: 5rem;
+    font-weight: 800;
+    color: rgba(246, 204, 182, 1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+.username_display {
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: rgba(246, 204, 182, 1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-transform: capitalize;
+}
+
+.welcome_text {
+    font-family: 'Sacramento', cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(18px, 4vw, 29px);
+    line-height: clamp(28px, 6vw, 47px);
+    letter-spacing: 0.02em;
+    text-align: center;
+    vertical-align: middle;
+    max-width: 100%;
+    margin: 0 auto;
+    color: rgba(246, 204, 182, 1);
+}
+
+.loading_bar_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 90vw;
+    min-width: 220px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    padding-left: 0;
+    background: transparent;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    box-sizing: border-box;
+}
+
+.loading_bar_track {
+    position: relative;
+    width: 100%;
+    height: min(5vw, 24px);
+    background: rgba(255,255,255,0.15);
+    border-radius: 20px;
+    overflow: visible;
+    border: 2px solid rgba(180,180,180,0.25);
+    box-shadow: none;
+}
+
+.loading_bar_fill {
+    height: 100%;
+    background: #731D1C;
+    border-radius: 18px;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    box-shadow: none;
+    margin-left: 0;
+}
+
+.heart_icon_moving {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    width: clamp(30px, 6vw, 54px);
+    height: clamp(30px, 6vw, 54px);
+    min-width: 24px;
+    min-height: 24px;
+    max-width: 60px;
+    max-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 20;
+    background: none;
+    box-shadow: none;
+    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wifi-highlight {
+    color: #E85A4F;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+
+.loading_bar_fill.completed {
+    width: 100% !important;
+    background: linear-gradient(90deg, #00C851, #007E33);
+    animation: none;
+}
+
+.loading_percentage {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    font-weight: 600;
+    color: rgba(246, 204, 182, 1);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+
+
+/* Animations */
+@keyframes heartBounce {
+    0% { transform: translateX(-50%) scale(1) rotate(-10deg); }
+    50% { transform: translateX(-50%) scale(1.15) rotate(0deg); }
+    100% { transform: translateX(-50%) scale(1) rotate(10deg); }
+}
+
+@keyframes heartPulse {
+    0% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-50%) scale(1.2); }
+    100% { transform: translateX(-50%) scale(1); }
+}
+
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .preloader_animation {
+        width: 340px;
+        height: 140px;
+    }
+    .username_display {
+        font-size: 2rem;
+    }
+    .welcome_text {
+        font-size: 24px;
+        line-height: 38px;
+        padding: 0 1rem;
+    }
+    .loading_bar_container {
+        max-width: 320px;
+        margin-top: 1.5rem;
+    }
+    .heart_icon_moving {
+        width: clamp(24px, 7vw, 40px);
+        height: clamp(24px, 7vw, 40px);
+        min-width: 18px;
+        min-height: 18px;
+        max-width: 44px;
+        max-height: 44px;
+        top: 50%;
+    }
+    .loading_bar_track {
+        height: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .preloader_animation {
+        width: 200px;
+        height: 80px;
+    }
+    .username_display {
+        font-size: 1.8rem;
+    }
+    .welcome_text {
+        font-size: 20px;
+        line-height: 32px;
+        padding: 0 1rem;
+    }
+    .loading_bar_container {
+        max-width: 280px;
+        margin-top: 1rem;
+    }
+    .heart_icon_moving {
+        width: clamp(16px, 8vw, 28px);
+        height: clamp(16px, 8vw, 28px);
+        min-width: 12px;
+        min-height: 12px;
+        max-width: 32px;
+        max-height: 32px;
+        top: 50%;
+    }
+    .loading_bar_track {
+        height: 8px;
+    }
+    .loading_percentage {
+        font-size: 1rem;
+    }
+}
