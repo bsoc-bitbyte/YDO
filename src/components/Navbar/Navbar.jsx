@@ -5,9 +5,7 @@ import YDO from '../../assets/navbar-images/YDO-logo.png'
 import notification from '../../assets/navbar-images/notification-YDO.png'
 import Account from '../../assets/navbar-images/Account-YDO.png'
 import Settings from '../../assets/navbar-images/Settings-YDO.png'
-
 function Navbar() {
-
   return (
     <>
       <svg width="0" height="0">
