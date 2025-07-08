@@ -1,0 +1,70 @@
+.Toastify__toast {
+  background: transparent !important;
+}
+
+.toast-message {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-style: 'regular';
+  font-size: 24px;
+  white-space: nowrap;
+  line-height: 20.59px;
+  letter-spacing: 2%;
+}
+
+.like-toast {
+  background: #D96C81 !important;
+  color: #541312 !important;
+  width: 570px !important;
+  height: 16px !important;
+  top: 35.09px;
+  left: -125.98px;
+  border: 3.93px solid;
+  opacity: 90%;
+  box-shadow: 0px 10.49px 10.49px #731d1c4f !important;
+  display: flex;
+  border-color:  #ffffff;
+  border-bottom-color: #999999;
+  border-radius: 78.65px !important;
+  padding-top: 28.54px;
+  padding-right: 136.33px;
+  padding-bottom: 27.54px;
+  padding-left: 136.33px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.toast-icon.left,
+.toast-icon.right {
+  width: 90px;
+  height: 120px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards 0.4s;
+  z-index: 0;
+}
+
+.toast-icon.left {
+  left: -40px;
+}
+
+.toast-icon.right {
+  right: -40px;
+
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+}
