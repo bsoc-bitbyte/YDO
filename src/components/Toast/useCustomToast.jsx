@@ -2,8 +2,8 @@ import { toast } from 'react-toastify';
 import ToastContent from './ToastContent';
 
 const useCustomToast = () => {
-  const showToast = (type, message) => {
-    toast(<ToastContent type={type} message={message} />, {
+  const showToast = (type) => {
+    toast(<ToastContent type={type} />, {
       toastClassName: ({type}) => `toast-shell ${type}-toast`,
       position: "top-center",
       autoClose: 3000,
