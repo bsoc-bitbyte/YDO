@@ -182,26 +182,26 @@ export default function ProfilePage() {
           <div className="divider"></div>
 
           <div className="right-section">
-            <div className="branch-year fixed-height">
-              {isEditing ? (
-                <>
-                  <input
-                    name="branch"
-                    value={profile.branch}
-                    onChange={handleChange}
-                    className="branch-input"
-                  />
-                  <input
-                    name="year"
-                    value={profile.year}
-                    onChange={handleChange}
-                    className="branch-input"
-                  />
-                </>
-              ) : (
-                `${profile.branch}, ${profile.year}`
-              )}
-            </div>
+            {isEditing ? (
+              <div className="branch-year fixed-height">
+                <input
+                  name="branch"
+                  value={profile.branch}
+                  onChange={handleChange}
+                  className="branch-input"
+                />
+                <input
+                  name="year"
+                  value={profile.year}
+                  onChange={handleChange}
+                  className="branch-input"
+                />
+              </div>
+            ) : (
+              <div className="branch-year fixed-height">
+                {`${profile.branch}, ${profile.year}`}
+              </div>
+            )}
 
             {["dob", "gender", "orientation", "interestedIn", "height"].map(
               (field) => (

@@ -8,10 +8,6 @@ import NotFound from "./pages/404/404";
 import PrivateRoute from "./components/ProtectedRoutes/ProtectedRoutes.jsx";
 import MainLayout from "./layouts/MainLayout.jsx";
 import Preloader from "./pages/Preloader/Preloader";
-<<<<<<< HEAD
-=======
-
->>>>>>> af6856a (feat(frontend): added Protection to Frontend Made changes according to requirement.  Closes #25)
 import ProfilePage from "./pages/Profile/ProfilePage.jsx";
 
 function App() {
@@ -36,4 +32,5 @@ function App() {
     </Routes>
   );
 }
+
 export default App;
