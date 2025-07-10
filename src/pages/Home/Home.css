@@ -1,0 +1,83 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+#root {
+  background: url("../../assets/Home/BG.svg") no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 70px;
+  padding-bottom: 300px;
+}
+
+.text-wrapper {
+  width: auto;
+  height: 150px;
+  margin: 3rem auto 3rem auto;
+  padding: 2rem;
+}
+
+.text {
+  font-family: "Sacramento", cursive;
+  font-size: 6rem;
+  text-align: center;
+  width: 100%;
+  color: rgba(246, 204, 182, 1);
+}
+
+.icons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.pass-icon,
+.smash,
+.refresh {
+  width: 60px;
+  height: 60px;
+}
+
+.pass-icon__image,
+.smash__image {
+  width: 65px;
+  height: 65px;
+  transition: all 0.4s ease;
+}
+
+.refresh__image {
+  width: 70px;
+  height: 70px;
+  transition: all 0.4s ease;
+}
+
+.pass-icon__image:hover,
+.smash__image:hover,
+.refresh__image:hover {
+  transform: scale(1.2);
+  transform: translateY(-5px);
+}
+
+.pass-icon__image:active,
+.smash__image:active,
+.refresh__image:active {
+  transform: scale(1.2);
+  transform: translateY(5px);
+}

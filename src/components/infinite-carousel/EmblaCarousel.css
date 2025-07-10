@@ -1,0 +1,153 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.embla {
+  position: relative;
+  max-width: 82vw;
+  margin: auto;
+}
+
+.embla__viewport {
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  padding: 1px;
+}
+
+.embla__container {
+  display: flex;
+  width: 100%;
+  touch-action: pan-y pinch-zoom;
+  position: relative;
+  margin: auto;
+}
+
+.embla__slide {
+  flex: 0 0 35%;
+  position: relative;
+  height: 450px;
+}
+
+.embla__slide:first-child:has(.card__container.selected),
+.embla__slide:nth-child(2):has(.card__container.selected),
+.embla__slide:last-child:has(.card__container.selected) {
+  z-index: 2;
+}
+
+.card__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(45px);
+  border: 1px solid white;
+  border-radius: 90px;
+  padding: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  position: relative;
+  transform: scale(0.6);
+  opacity: 0.2;
+  z-index: -4;
+  transition: transform 0.8s ease, opacity 0.8s ease, z-index 0.8s ease;
+  pointer-events: none;
+  margin: 0 -120px;
+  height: 100%;
+}
+
+.card__container.selected {
+  transform: scale(1);
+  opacity: 1;
+  z-index: 11;
+  pointer-events: auto;
+}
+
+.card__img-wrapper {
+  width: 54%;
+  margin-left: 25px;
+  margin-right: 8px;
+  height: 350px;
+  border-radius: 40px;
+  border: 1px solid white;
+}
+
+.card__img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+}
+
+.card__data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 1rem;
+  padding: 0 1.5rem;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  margin-left: 10px;
+  height: 95%;
+}
+
+.card__data--heading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 44px;
+  color: rgba(246, 204, 182, 1);
+  text-align: left;
+}
+
+.card__data--subheading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 44px;
+  color: rgba(246, 204, 182, 1);
+  text-align: left;
+}
+.card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.tag {
+  font-family: "Poppins", sans-serif;
+  background-color: rgba(246, 204, 182, 0.2);
+  border: 1px solid white;
+  border-radius: 12px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.8rem;
+}
+
+.card__description {
+  font-family: "Poppins", sans-serif;
+  background: rgba(246, 204, 182, 0.2);
+  border-radius: 20px;
+  padding: 8px;
+  border: 1px solid white;
+  max-width: 700px;
+  margin-bottom: 10px;
+}
+
+.embla__next,
+.embla__prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+}
+.embla__next {
+  right: 280px;
+}
+.embla__prev {
+  left: 280px;
+}
