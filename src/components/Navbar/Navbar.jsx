@@ -91,7 +91,7 @@ function App() {
               <button className='btn' style={{height:'100%'}} >
               <img className='Settings-YDO' src={Settings} />
               </button>
-              <NavLink style={{textDecoration:'none',display:'flex',alignItems:'center',height:'100%'}} to={'/account'} className={({isActive})=>`${isActive? "active":""}`}>
+              <NavLink style={{textDecoration:'none',display:'flex',alignItems:'center',height:'100%'}} to={'/profile'} className={({isActive})=>`${isActive? "active":""}`}>
               <img className='Account-YDO' src={Account} style={{padding:'0.8px'}} />
               </NavLink>  
             </div>  
