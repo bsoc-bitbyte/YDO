@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
-import { Navigate } from "react-router-dom";
+import { Outlet, Navigate } from "react-router-dom";
 import { checkLoginStatus } from "../../utils/checkLoginStatus";
+import Preloader from "../../pages/Preloader/Preloader";
+
 const API_BASE_URL = import.meta.env.VITE_API_URL || "";
 
-const PrivateRoute = ({ children }) => {
+const PrivateRoutesWrapper = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(null);
 
   useEffect(() => {
@@ -14,7 +16,10 @@ const PrivateRoute = ({ children }) => {
     checkAuth();
   }, []);
 
-  return isAuthenticated ? children : <Navigate to="/login" replace />;
+  if (isAuthenticated === null) return <Preloader />;
+  if (!isAuthenticated) return <Navigate to="/login" replace />;
+
+  return <Outlet />;
 };
 
-export default PrivateRoute;
+export default PrivateRoutesWrapper;
