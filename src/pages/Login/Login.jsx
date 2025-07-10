@@ -27,9 +27,11 @@ const Login = ({ onLogin }) => {
     window.location = `${API_BASE_URL}/auth/signin/google`;
   };
 
-  if (loggedIn) {
-    window.location.href = "/home";
-  }
+    useEffect(() => {
+    if (loggedIn) {
+      window.location.href = "/home";
+    }
+  }, [loggedIn]);
   return (
     <>
     <div className="container" style={{backgroundImage:`url(${backgroundImage})`}}>
