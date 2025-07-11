@@ -58,6 +58,7 @@
   pointer-events: none;
   margin: 0 -120px;
   height: 100%;
+  min-width: 800px;
 }
 
 .card__container.selected {
@@ -65,6 +66,26 @@
   opacity: 1;
   z-index: 11;
   pointer-events: auto;
+}
+
+.selected.fade-in {
+  opacity: 1;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.selected.fade-out {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.fade-in {
+  opacity: 0.2;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
 }
 
 .card__img-wrapper {
@@ -161,6 +182,132 @@
   transform: translateY(-50%) translateX(-10px);
 }
 
+/*
+------------------------------Skeleton cards-------------------------
+*/
+
+.card__img-wrapper--skeleton {
+  width: 40%;
+  margin-left: 25px;
+  margin-right: 8px;
+  height: 350px;
+  border-radius: 40px;
+  border: 1px solid white;
+}
+
+.card__data--heading--skeleton {
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+}
+
+.card__data--subheading--skeleton {
+  width: 150px;
+  height: 30px;
+  margin-top: 1rem;
+  border-radius: 20px;
+}
+
+.tag--skeleton {
+  display: inline-block;
+  background-color: rgba(246, 204, 182, 0.2);
+  border: 1px solid white;
+  border-radius: 12px;
+  padding: 0.2rem 0.6rem;
+  width: 50px;
+  height: 25px;
+  margin: 5px;
+}
+
+.card__description--skeleton {
+  display: inline-block;
+  background: rgba(246, 204, 182, 0.2);
+  border-radius: 20px;
+  padding: 8px;
+  border: 1px solid white;
+  width: 300px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1s infinite ease-in-out;
+}
+
+.skeleton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 25%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.4) 75%,
+    transparent 100%
+  );
+  animation: shimmerOverlay 2s infinite ease-in-out;
+  z-index: 1;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes shimmerOverlay {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.card__data--heading--skeleton {
+  animation-delay: 0.1s;
+}
+
+.card__data--subheading--skeleton {
+  animation-delay: 0.2s;
+}
+
+.tag--skeleton:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.tag--skeleton:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.tag--skeleton:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.tag--skeleton:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.card__description--skeleton {
+  animation-delay: 0.7s;
+}
+
 @media (max-width: 1024px) {
   .embla__slide {
     flex: 0 0 50%;
@@ -171,6 +318,7 @@
     border-radius: 60px;
     transform: scale(0.5);
     margin: 0 -100px;
+    min-width: 400px;
   }
 
   .card__container.selected {
