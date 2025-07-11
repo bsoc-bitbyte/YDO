@@ -1,0 +1,354 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.embla {
+  position: relative;
+  max-width: 82vw;
+  margin: auto;
+}
+
+.embla__viewport {
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  padding: 1px;
+}
+
+.embla__container {
+  display: flex;
+  width: 100%;
+  touch-action: pan-y pinch-zoom;
+  position: relative;
+  margin: auto;
+}
+
+.embla__slide {
+  flex: 0 0 35%;
+  position: relative;
+  height: 450px;
+}
+
+.embla__slide:first-child:has(.card__container.selected),
+.embla__slide:nth-child(2):has(.card__container.selected),
+.embla__slide:last-child:has(.card__container.selected) {
+  z-index: 2;
+}
+
+.card__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(45px);
+  border: 1px solid white;
+  border-radius: 90px;
+  padding: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  position: relative;
+  transform: scale(0.6);
+  opacity: 0.2;
+  z-index: -4;
+  transition: transform 1s ease, opacity 1s ease, z-index 1s ease;
+  pointer-events: none;
+  margin: 0 -120px;
+  height: 100%;
+  min-width: 800px;
+}
+
+.card__container.selected {
+  transform: scale(1);
+  opacity: 1;
+  z-index: 11;
+  pointer-events: auto;
+}
+
+.selected.fade-in {
+  opacity: 1;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.selected.fade-out {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.fade-in {
+  opacity: 0.2;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.card__img-wrapper {
+  width: 54%;
+  margin-left: 25px;
+  margin-right: 8px;
+  height: 350px;
+  border-radius: 40px;
+  border: 1px solid white;
+}
+
+.card__img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+}
+
+.card__data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 1rem;
+  padding: 0 1.5rem;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  margin-left: 10px;
+  height: 95%;
+}
+
+.card__data--heading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 44px;
+  color: rgba(246, 204, 182, 1);
+  text-align: left;
+}
+
+.card__data--subheading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 44px;
+  color: rgba(246, 204, 182, 1);
+  text-align: left;
+}
+.card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.tag {
+  font-family: "Poppins", sans-serif;
+  background-color: rgba(246, 204, 182, 0.2);
+  border: 1px solid white;
+  border-radius: 12px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.8rem;
+}
+
+.card__description {
+  font-family: "Poppins", sans-serif;
+  background: rgba(246, 204, 182, 0.2);
+  border-radius: 20px;
+  padding: 8px;
+  border: 1px solid white;
+  max-width: 700px;
+  margin-bottom: 10px;
+}
+
+.embla__next,
+.embla__prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.6s ease;
+}
+.embla__next {
+  right: 280px;
+}
+.embla__prev {
+  left: 280px;
+}
+
+.embla__next:hover {
+  transform: translateY(-50%) translateX(10px);
+}
+
+.embla__prev:hover {
+  transform: translateY(-50%) translateX(-10px);
+}
+
+/*
+------------------------------Skeleton cards-------------------------
+*/
+
+.card__img-wrapper--skeleton {
+  width: 40%;
+  margin-left: 25px;
+  margin-right: 8px;
+  height: 350px;
+  border-radius: 40px;
+  border: 1px solid white;
+}
+
+.card__data--heading--skeleton {
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+}
+
+.card__data--subheading--skeleton {
+  width: 150px;
+  height: 30px;
+  margin-top: 1rem;
+  border-radius: 20px;
+}
+
+.tag--skeleton {
+  display: inline-block;
+  background-color: rgba(246, 204, 182, 0.2);
+  border: 1px solid white;
+  border-radius: 12px;
+  padding: 0.2rem 0.6rem;
+  width: 50px;
+  height: 25px;
+  margin: 5px;
+}
+
+.card__description--skeleton {
+  display: inline-block;
+  background: rgba(246, 204, 182, 0.2);
+  border-radius: 20px;
+  padding: 8px;
+  border: 1px solid white;
+  width: 300px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1s infinite ease-in-out;
+}
+
+.skeleton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 25%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.4) 75%,
+    transparent 100%
+  );
+  animation: shimmerOverlay 2s infinite ease-in-out;
+  z-index: 1;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes shimmerOverlay {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.card__data--heading--skeleton {
+  animation-delay: 0.1s;
+}
+
+.card__data--subheading--skeleton {
+  animation-delay: 0.2s;
+}
+
+.tag--skeleton:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.tag--skeleton:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.tag--skeleton:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.tag--skeleton:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.card__description--skeleton {
+  animation-delay: 0.7s;
+}
+
+@media (max-width: 1024px) {
+  .embla__slide {
+    flex: 0 0 50%;
+    height: 350px;
+  }
+
+  .card__container {
+    border-radius: 60px;
+    transform: scale(0.5);
+    margin: 0 -100px;
+    min-width: 400px;
+  }
+
+  .card__container.selected {
+    transform: scale(0.9);
+  }
+
+  .card__img-wrapper {
+    width: 60%;
+    height: 250px;
+  }
+
+  .card__data--heading,
+  .card__data--subheading {
+    font-size: 30px;
+  }
+
+  .tag {
+    font-size: 0.6rem;
+  }
+
+  .card__description {
+    max-width: 90%;
+    font-size: 0.67rem;
+  }
+
+  .embla__next {
+    right: 80px;
+  }
+
+  .embla__prev {
+    left: 80px;
+  }
+}
