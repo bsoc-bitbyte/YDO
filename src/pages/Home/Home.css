@@ -7,7 +7,7 @@ body {
 }
 
 #root {
-  background: url("../../assets/Home/BG.svg") no-repeat;
+  background: url("../../assets/Home/BG.png") no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -80,4 +80,21 @@ body {
 .refresh__image:active {
   transform: scale(1.2);
   transform: translateY(5px);
+}
+
+@media (max-width: 1024px) {
+  .text {
+    font-size: 4rem;
+  }
+  .pass-icon__image,
+  .smash__image {
+    width: 55px;
+    height: 55px;
+    transition: all 0.4s ease;
+  }
+  .refresh__image {
+    width: 60px;
+    height: 60px;
+    transition: all 0.4s ease;
+  }
 }
