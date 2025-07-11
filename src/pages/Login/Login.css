@@ -98,15 +98,18 @@ padding: 0.5rem 1.1rem;
 }
 
 .text {
-  width: 148px;
-  height: 36px;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 501;
   font-size: 1.3vw;
-  line-height: 36px;
+  line-height: 1.2;
   text-align: center;
   letter-spacing: 0.02em;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  height: auto;
+  width: auto;
 }
 
 .container1 {
