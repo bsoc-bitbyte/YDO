@@ -15,17 +15,16 @@ function App() {
     <Routes>
       <Route element={<MainLayout />}>
         <Route path="/" element={<Landingpage />} />
-         <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route element={<PrivateRoutesWrapper />}>
           <Route path="/home" element={<Home />} />
           <Route path="/profile" element={<ProfilePage />} />
-          
+          <Route path="/preloader" element={<Preloader />} />
+          {/* Add more protected routes here */}
         </Route>
         <Route path="/callback" element={<Callback />} />
       </Route>
-      <Route path="/preloader" element={<Preloader />} />
       
-
 
       <Route path="*" element={<NotFound />} />
     </Routes>
