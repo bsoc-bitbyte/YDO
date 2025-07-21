@@ -9,25 +9,31 @@ import MainLayout from "./layouts/MainLayout.jsx";
 import Preloader from "./pages/Preloader/Preloader";
 import ProfilePage from "./pages/Profile/ProfilePage.jsx";
 import PrivateRoutesWrapper from "./components/ProtectedRoutes/PrivateRoutesWrapper.jsx";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
   return (
-    <Routes>
-      <Route element={<MainLayout />}>
-        <Route path="/" element={<Landingpage />} />
-        <Route path="/login" element={<Login />} />
-        <Route element={<PrivateRoutesWrapper />}>
-          <Route path="/home" element={<Home />} />
-          <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/preloader" element={<Preloader />} />
-          {/* Add more protected routes here */}
+    <>
+      <ToastContainer />
+    
+      <Routes>
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<Landingpage />} />
+          <Route path="/login" element={<Login />} />
+          <Route element={<PrivateRoutesWrapper />}>
+            <Route path="/home" element={<Home />} />
+            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/preloader" element={<Preloader />} />
+            {/* Add more protected routes here */}
+          </Route>
+          <Route path="/callback" element={<Callback />} />
         </Route>
-        <Route path="/callback" element={<Callback />} />
-      </Route>
       
 
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </>
   );
 }
 
