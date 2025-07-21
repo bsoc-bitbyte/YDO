@@ -1,6 +1,6 @@
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-export const fetchUsers = async (signal) => {
+const fetchUsers = async (signal) => {
   try {
     const res = await fetch(`${API_BASE_URL}/api/profiles`, { signal });
     if (!res.ok) throw new Error("Failed to fetch profiles");
@@ -10,3 +10,5 @@ export const fetchUsers = async (signal) => {
     return { error: error.message };
   }
 };
+
+export default fetchUsers;
