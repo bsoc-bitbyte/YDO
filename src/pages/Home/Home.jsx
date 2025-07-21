@@ -1,7 +1,3 @@
-import React from "react";
-//import { useNavigate } from "react-router-dom";
-import Button from "../../components/button/Button";
-//import { fetchUserData } from "../../utils/fetchUserData";
 import Navbar from "../../components/Navbar/Navbar.jsx";
 import "./Home.css";
 import refreshIcon from "../../assets/Home/refreshIcon.png";
@@ -11,27 +7,6 @@ import EmblaCarousel from "../../components/infinite-carousel/EmblaCarousel";
 import "@fontsource/sacramento";
 
 const Home = () => {
-  //   const [userData, setUserData] = React.useState(null);
-
-  //   const API_BASE_URL = import.meta.env.VITE_API_URL || "";
-
-  //   const nav = useNavigate();
-
-  //   const redirectToLogin = () => {
-  //     nav("/login");
-  //   };
-
-  //  React.useEffect(() => {
-  //     const loadUser = async () => {
-  //       const data = await fetchUserData(API_BASE_URL);
-  //       if (data) {
-  //         setUserData(data);
-  //       }
-  //     };
-
-  //     loadUser();
-  //   }, []);
-
   return (
     <>
       <Navbar />

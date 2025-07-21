@@ -2,10 +2,8 @@ import React, { useEffect, useState, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import nextArrow from "../../assets/carousel/nextArrow.svg";
 import prevArrow from "../../assets/carousel/prevArrow.svg";
-//import profiles from "./profiles.json";
+import fetchUsers from "../../utils/fetchProfiles";
 import "./EmblaCarousel.css";
-
-const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 const ProfileCard = ({
   profile,
@@ -98,33 +96,23 @@ const EmblaCarousel = () => {
   const [fadeComplete, setFadeComplete] = useState(false);
   const [contentVisible, setContentVisible] = useState(false);
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setLoading(false);
-  //     setTimeout(() => setContentVisible(true), 100);
-  //   }, 3000);
-  //   return () => clearTimeout(timer);
-  // });
-
   useEffect(() => {
     const controller = new AbortController();
-    const fetchData = async () => {
-      try {
-        const res = await fetch(`${API_BASE_URL}/api/profiles`, {
-          signal: controller.signal,
-        });
-        if (!res.ok) throw new Error("failed to fetch profiles");
-        const data = await res.json();
+
+    const loadProfiles = async () => {
+      const { data, error } = await fetchUsers(controller.signal);
+      if (error) {
+        setError(error);
+      } else {
         setProfiles(data);
-      } catch (error) {
-        setError(error.message);
-      } finally {
-        setLoading(false);
-        setTimeout(() => setContentVisible(true), 100);
       }
+      setLoading(false);
+      setTimeout(() => setContentVisible(true), 100);
     };
-    fetchData();
-    return () => controller.abort;
+
+    loadProfiles();
+
+    return () => controller.abort();
   }, []);
 
   useEffect(() => {
