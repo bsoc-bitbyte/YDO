@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router'
 import {NavLink} from 'react-router'
-import './App.css'
+import './Navbar.css'
 import YDO from '../../assets/navbar-images/YDO-logo.png'
 import notification from '../../assets/navbar-images/notification-YDO.png'
 import Account from '../../assets/navbar-images/Account-YDO.png'
