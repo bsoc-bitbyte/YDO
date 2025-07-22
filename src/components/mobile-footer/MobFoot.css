@@ -1,0 +1,9 @@
+.mobile-footer {
+  width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  bottom: 10px;
+}

@@ -12,6 +12,16 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: block;
 }
 
 .main {
@@ -96,5 +106,78 @@ body {
     width: 60px;
     height: 60px;
     transition: all 0.4s ease;
+  }
+}
+
+@media (max-width: 767px) {
+  .desktop {
+    display: none;
+  }
+
+  .nav-header {
+    display: none;
+  }
+
+  .text-wrapper--mobile {
+    width: 100vw;
+    margin-top: 7rem;
+    margin-bottom: 4rem;
+  }
+
+  .text--mobile {
+    font-family: "Sacramento", cursive;
+    font-size: 3rem;
+    text-align: center;
+    color: rgba(246, 204, 182, 1);
+    letter-spacing: 1px;
+  }
+
+  .mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .main--mobile {
+    flex: 1;
+  }
+
+  .icons--mob {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80vw;
+    margin: 3rem auto;
+    padding: 1rem;
+  }
+
+  .pass-icon--mob,
+  .smash--mob,
+  .refresh--mob {
+    width: 50px;
+    height: 50px;
+  }
+
+  .pass-icon__image--mob,
+  .smash__image--mob {
+    width: 50px;
+    height: 50px;
+    transition: all 0.4s ease;
+  }
+
+  .refresh__image--mob {
+    width: 50px;
+    height: 50px;
+    transition: all 0.4s ease;
+  }
+
+  .pass-icon__image--mob:active,
+  .smash__image--mob:active,
+  .refresh__image--mob:active {
+    transform: scale(1.2);
+    transform: translateY(5px);
   }
 }

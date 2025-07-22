@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.swiper {
+  width: 300px;
+  height: 600px;
+}
+
+.swiper-slide {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+  border-radius: 20px;
+  padding: 10px;
+  background: url("../../assets/Home/BG.png") no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(45px);
+  border: 1px solid white;
+}
+
+.card__image {
+  position: absolute;
+  margin: 5px 0;
+  width: 80%;
+  height: 51%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.card__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.card__data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+  max-height: 500px;
+}
+
+.head-wrapper {
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(25px);
+  border-radius: 20px;
+}
+
+.name-age {
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: rgba(246, 204, 182, 1);
+  padding: 1px 2px;
+}
+
+.discipline-year {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: rgba(246, 204, 182, 0.9);
+  padding: 1px 10px;
+}
+
+.tags {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+.tag {
+  font-family: "Poppins", sans-serif;
+  background-color: rgba(246, 204, 182, 0.2);
+  border: 1px solid white;
+  border-radius: 12px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.8rem;
+}
+
+.description {
+  font-family: "Poppins", sans-serif;
+  background: rgba(246, 204, 182, 0.2);
+  border-radius: 20px;
+  padding: 0 8px;
+  border: 1px solid white;
+  max-height: 100px;
+  overflow: auto;
+}
+
+.user-card-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.description p {
+  padding: 5px;
+  font-size: 14px;
+}
+
+.skeleton-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+  border-radius: 20px;
+  padding: 10px;
+  background: url("../../assets/Home/BG.png") no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(45px);
+}
+
+.error {
+  position: absolute;
+  top: 50%;
+}
+
+.skeleton-image {
+  width: 100%;
+  height: 70%;
+  background: rgba(246, 204, 182, 0.2);
+  border-radius: 20px;
+}
+
+.skeleton-data {
+  padding: 20px;
+  flex: 1;
+}
+
+.skeleton-line {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.skeleton-name {
+  height: 24px;
+  width: 60%;
+}
+
+.skeleton-discipline {
+  height: 18px;
+  width: 45%;
+}
+
+.skeleton-tags {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.skeleton-tag {
+  height: 20px;
+  width: 50px;
+  background: #e2e5e7;
+  border-radius: 12px;
+}
+
+.skeleton-description {
+  margin-top: 16px;
+}
+
+.skeleton-desc-line {
+  height: 16px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.skeleton-desc-short {
+  width: 70%;
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(246, 204, 182, 0.2) 25%,
+    rgba(246, 204, 182, 0.4) 50%,
+    rgba(246, 204, 182, 0.2) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
