@@ -8,23 +8,26 @@
   box-sizing: border-box;
 }
 
-.swiper {
-  width: 300px;
-  height: 600px;
+.card-stack-container {
+  position: relative;
+  width: 100%;
+  height: 600px; /* or however tall your cards are */
+  display: grid;
+  place-items: center;
 }
 
-.swiper-slide {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  align-items: center;
-  border-radius: 20px;
-  padding: 10px;
+.card-stack-item {
   background: url("../../assets/Home/BG.png") no-repeat;
   background-size: cover;
+  grid-row: 1;
+  grid-column: 1;
+  padding: 10px;
+  border-radius: 30px;
   backdrop-filter: blur(45px);
-  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 320px;
+  height: 600px;
+  border: 2px solid white;
 }
 
 .card__image {
