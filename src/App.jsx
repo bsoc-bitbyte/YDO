@@ -10,13 +10,13 @@ import Preloader from "./pages/Preloader/Preloader";
 import ProfilePage from "./pages/Profile/ProfilePage.jsx";
 import PrivateRoutesWrapper from "./components/ProtectedRoutes/PrivateRoutesWrapper.jsx";
 import { ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css'
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
     <>
       <ToastContainer />
-    
+
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Landingpage />} />
@@ -29,7 +29,6 @@ function App() {
           </Route>
           <Route path="/callback" element={<Callback />} />
         </Route>
-      
 
         <Route path="*" element={<NotFound />} />
       </Routes>

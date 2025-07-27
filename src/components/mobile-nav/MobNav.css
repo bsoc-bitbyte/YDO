@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 100;
+  height: 110px;
+}
+
+.navbar__logo img,
+.navbar__account img {
+  display: inline-block;
+  width: 100%;
+}
+
+.navbar__logo {
+  height: auto;
+  width: 110px;
+}
+
+.navbar__account {
+  height: auto;
+  width: 30px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1000;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.overlay.closed {
+  animation: fadeOut 0.8s ease-out;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 320px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  animation: slideIn 0.8s ease-out;
+  font-family: "Poppins", sans-serif;
+}
+
+.drawer.closed {
+  animation: slideOut 0.8s ease-out;
+}
+
+.drawer__close {
+  display: flex;
+  justify-content: flex-start;
+  padding: 24px;
+}
+
+.drawer__close img {
+  width: 24px;
+  height: 24px;
+}
+
+.drawer__items {
+  padding: 0 32px;
+  margin-top: 32px;
+}
+
+.drawer__items a {
+  display: block;
+  padding: 16px 20px;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.drawer__text {
+  position: relative;
+  display: inline-block;
+}
+
+.drawer__text::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgba(246, 204, 182, 1);
+  transition: width 0.3s ease;
+}
+
+.drawer__items a:hover .drawer__text::after {
+  width: 100%;
+}
+
+.drawer__text {
+  color: rgba(246, 204, 182, 1);
+  font-size: 25px;
+  font-weight: 500;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.2s ease;
+}
+
+.drawer__items a:hover .drawer__text {
+  color: rgba(246, 204, 182, 1);
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.drawer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 128px;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.05), transparent);
+  pointer-events: none;
+}
+
+@media (max-width: 375px) {
+  .glassy-drawer {
+    width: 280px;
+  }
+}
+
+.drawer {
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    ),
+    rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
