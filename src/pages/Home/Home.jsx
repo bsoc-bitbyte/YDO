@@ -8,12 +8,37 @@ import MobNav from "../../components/mobile-nav/MobNav.jsx";
 import MobFoot from "../../components/mobile-footer/MobFoot.jsx";
 import MobCarousel from "../../components/mobile-carousel/MobCarousel.jsx";
 import "@fontsource/sacramento";
+import {useEffect, useState} from "react";
+import fetchUsers from "../../utils/fetchUsers.js";
 
 const Home = () => {
+  const [profiles, setProfiles] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    const loadProfiles = async () => {
+      try {
+        setLoading(true);
+        const { data, error } = await fetchUsers(controller.signal);
+        if (error) throw new Error(error);
+        setProfiles(data);
+      } catch (error) {
+        console.error("Failed to fetch profiles:", error);
+        setError("Could not load profiles");
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadProfiles();
+    return () => controller.abort();
+  }, []);
+
   return (
     <>
       <div className="mobile">
-        <MobNav />
+        <MobNav/>
         <div className="main--mobile">
           <div className="text-wrapper--mobile">
             <h2 className="text--mobile">
@@ -21,7 +46,7 @@ const Home = () => {
               <br /> blush today?🥰
             </h2>
           </div>
-          <MobCarousel />
+          <MobCarousel profiles={profiles} loading={loading} error={error} setProfiles={setProfiles}/>
           <div className="icons--mob">
             <div className="pass-icon--mob">
               <img src={pass} alt="pass" className="pass-icon__image--mob" />
@@ -46,7 +71,7 @@ const Home = () => {
           <div className="text-wrapper">
             <h2 className="text">Ready to make someone blush today?🥰</h2>
           </div>
-          <EmblaCarousel />
+          <EmblaCarousel profiles={profiles} loading={loading} error={error} setProfiles={setProfiles}/>
           <div className="icons">
             <div className="pass-icon">
               <img src={pass} alt="pass" className="pass-icon__image" />

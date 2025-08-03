@@ -5,7 +5,6 @@ import {
   useMotionValue,
   useTransform,
 } from "framer-motion";
-import fetchUsers from "../../utils/fetchProfiles";
 import "./MobCarousel.css";
 
 const SkeletonCard = () => (
@@ -121,31 +120,9 @@ const UserCard = ({
   );
 };
 
-export default function MobCarousel() {
-  const [profiles, setProfiles] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+export default function MobCarousel({profiles, loading, error, setProfiles}) {
   const [liked, setLiked] = useState([]);
   const [disliked, setDisliked] = useState([]);
-
-  useEffect(() => {
-    const controller = new AbortController();
-    const loadProfiles = async () => {
-      try {
-        setLoading(true);
-        const { data, error } = await fetchUsers(controller.signal);
-        if (error) throw new Error(error);
-        setProfiles(data);
-      } catch (error) {
-        setError("Could not load profiles");
-        console.error("Failed to fetch profiles:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    loadProfiles();
-    return () => controller.abort();
-  }, []);
 
   const handleSwipe = (profile, direction) => {
     if (direction === "right") {
@@ -182,7 +159,7 @@ export default function MobCarousel() {
     );
   }
 
-  if (profiles.lenth === 0) {
+  if (profiles.length === 0) {
     return (
       <div className="card-stack-empty">
         <p>No more profiles 💔</p>
