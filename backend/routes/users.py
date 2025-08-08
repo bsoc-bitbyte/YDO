@@ -121,3 +121,15 @@ def modify_user():
         return jsonify({"message":"User updated successfully"}), 200
     except Exception as e:
         return jsonify({"error updating user":str(e)}), 500
+
+    #get only id of a user
+@users_bp.route("/roll-number", methods=["GET"])
+@auth_required
+def roll_number_user():
+    try:
+        return jsonify({"Roll Number of user": g.user_id}), 200
+    except Exception as e:
+        return jsonify({"error getting roll number": str(e)}), 500
+
+
+
