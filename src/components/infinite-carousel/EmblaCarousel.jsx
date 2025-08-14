@@ -2,7 +2,6 @@ import React, { useEffect, useState, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import nextArrow from "../../assets/carousel/nextArrow.svg";
 import prevArrow from "../../assets/carousel/prevArrow.svg";
-import fetchUsers from "../../utils/fetchProfiles";
 import "./EmblaCarousel.css";
 
 const ProfileCard = ({
@@ -82,38 +81,28 @@ const SkeletonCard = ({ index, selectedSlide }) => {
   );
 };
 
-const EmblaCarousel = () => {
+const EmblaCarousel = ({profiles, setProfiles, error, loading}) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "center",
   });
 
   //Backend integration
-
-  const [profiles, setProfiles] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [fadeComplete, setFadeComplete] = useState(false);
   const [contentVisible, setContentVisible] = useState(false);
 
-  useEffect(() => {
-    const controller = new AbortController();
-
-    const loadProfiles = async () => {
-      const { data, error } = await fetchUsers(controller.signal);
-      if (error) {
-        setError(error);
-      } else {
-        setProfiles(data);
-      }
-      setLoading(false);
+    useEffect(() => {
+    if (!loading) {
       setTimeout(() => setContentVisible(true), 100);
-    };
+    }
+  }, [loading]);
 
-    loadProfiles();
-
-    return () => controller.abort();
-  }, []);
+  useEffect(() => {
+    if (contentVisible && !fadeComplete) {
+      const timer = setTimeout(() => setFadeComplete(true), 600);
+      return () => clearTimeout(timer);
+    }
+  }, [contentVisible, fadeComplete]);
 
   useEffect(() => {
     if (contentVisible && !fadeComplete) {

@@ -1,5 +1,6 @@
 import os
 
+from routes.users import users_bp
 from config import Config
 from flask import Flask
 from flask_cors import CORS
@@ -16,4 +17,6 @@ app.config.from_object(Config)
 CORS(app, supports_credentials=True, origins=[app.config['FRONTEND_URL']])
 
 app.register_blueprint(auth_bp, url_prefix='/auth')
+
+app.register_blueprint(users_bp, url_prefix='/api/users')
 
